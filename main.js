@@ -5,13 +5,14 @@ var myImage = document.querySelector('img');
 
 myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/firefox-icon.png') {
-        myImage.setAttribute ('src','images/ozan.png');
+    if(mySrc === 'images/mikey.jpg') {
+        myImage.setAttribute ('src','images/bernie.jpg');
     } else {
-        myImage.setAttribute ('src','images/firefox-icon.png');
+        myImage.setAttribute ('src','images/mikey.jpg');
     }
 }
 
+/*
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
 
@@ -30,4 +31,6 @@ if(!localStorage.getItem('name')){
 
 myButton.onclick = function(){
     setUserName();
+
 }
+*/
