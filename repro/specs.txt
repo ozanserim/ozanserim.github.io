@@ -1,0 +1,66 @@
+QA Tools Specs
+===============
+
+Overview
+------
+Get domain info for qa
+AC scripts
+Entity scripts
+Interface scripts
+
+HF Content Primitives
+---------------------
+Avatar
+Entity
+Props
+Environment
+Lights
+Animation
+Domain
+Coordinates
+
+
+Use case
+-----------
+
+- User encounters bug
+- User initiates a bug report (qa snapshot)
+- HF displays a the current domain info (avatar, domain, etc.)
+- HF displays an area for the user to enter free-form text.
+- The user enters text and sends the report to HF.
+
+
+Samples
+--------
+
+Avatar
+var myPosition = MyAvatar.position;
+
+Entities
+var properties = {
+                type: "Box",
+                position: {x: x, y: y, z: z},
+                color: {red: color, green: color, blue: 255},
+                dimensions: {x: 1, y: 1, z: 1},
+            };
+            floor = Entities.addEntity(properties);
+
+Flow
+function checkeredFloor (){
+                     .....
+                     Script.stop();
+                 }
+                 checkeredFloor();
+
+
+Create web entity
+
+var url = Script.resolvePath('html/entityProperties.html');
+var webView = new WebWindow('Entity Properties', url, 200, 280, true);
+
+***
+[02/25 15:10:26] [DEBUG] Created web entity  QUuid("{d894395d-8f39-40b7-86d8-925a59f4f929}")
+[02/25 15:10:26] [DEBUG] Setting web entity source URL to  "https://highfidelity.com/"
+
+
+no info about webView
