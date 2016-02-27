@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d04f2d86-0cbb-4388-b0ea-9759cdce1020" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/repro.html" afterPath="$PROJECT_DIR$/repro/repro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/repro.js" afterPath="$PROJECT_DIR$/repro/repro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/specs.txt" afterPath="$PROJECT_DIR$/repro/specs.txt" />
     </list>
     <ignored path="for_github.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="repro.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/repro/repro.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83425415">
-              <caret line="77" column="88" selection-start-line="77" selection-start-column="88" selection-end-line="77" selection-end-column="88" />
+            <state vertical-scroll-proportion="0.8508287">
+              <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#p#6;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#1;n#p#6;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -494,14 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repro/repro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.111111">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repro/specs.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -510,10 +500,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/repro/repro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.111111">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/repro/repro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83425415">
-          <caret line="77" column="88" selection-start-line="77" selection-start-column="88" selection-end-line="77" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.8508287">
+          <caret line="78" column="43" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#img#0;n#p#6;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#1;n#p#6;n#body#0;n#html#0;n#!!top" expanded="true" />

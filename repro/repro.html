@@ -41,8 +41,8 @@
     <h3>Images</h3>
     <p id ="imagessection">
         <!-- Some images -->
-        <img id="screenshot1" style="width:600px;height:400px;">
-        <img id="screenshot2" style="width:600px;height:400px;">
+        <img id="screenshot1" style="width:400px;height:400px;">
+        <img id="screenshot2" style="width:400px;height:400px;">
 
     </p>
 
@@ -75,7 +75,8 @@
         reproinfo.entities = reproinfo.entities.replace(",", "<br>");
         entitiessection.innerHTML = reproinfo.entities;
 
-        var image1 = document.getElementById("screenshot1").src = "images/huffmeme.jpg";
+        document.getElementById("screenshot1").src = "images/huffmeme.jpg";
+        document.getElementById("screenshot2").src = "images/huffmeme.jpg";
 
     </script>
     </body>
