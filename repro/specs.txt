@@ -8,6 +8,9 @@ AC scripts
 Entity scripts
 Interface scripts
 
+Public URL
+https://raw.githubusercontent.com/ozanserim/ozanserim.github.io/master/repro/repro.js
+
 HF Content Primitives
 ---------------------
 Avatar
@@ -100,3 +103,9 @@ http://..../.fst
 
 location.href
 hifi://ozan/2.01026e-05,0.540076,-0.000571175/-4.939e-05,0.295829,0.00015944,0.955241
+
+snapshot
+SnapshotShareDialog_QMLTYPE_234::uploadSnapshot(const QString& snapshot)
+
+Google's Report a Bug tool
+http://stackoverflow.com/questions/4912092/using-html5-canvas-javascript-to-take-screenshots

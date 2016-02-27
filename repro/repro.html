@@ -38,24 +38,12 @@
         <!-- Some text -->
     </p>
 
-    <h3>Props</h3>
-    <p id ="propssection">
-        <!-- Some text -->
-    </p>
+    <h3>Images</h3>
+    <p id ="imagessection">
+        <!-- Some images -->
+        <img id="screenshot1" style="width:600px;height:400px;">
+        <img id="screenshot2" style="width:600px;height:400px;">
 
-    <h3>Lights</h3>
-    <p id ="lightssection">
-        <!-- Some text -->
-    </p>
-
-    <h3>Animation</h3>
-    <p id ="animationsection">
-        <!-- Some text -->
-    </p>
-
-    <h3>Scripts</h3>
-    <p id ="scriptssection">
-        <!-- Some text -->
     </p>
 
     <script>
@@ -86,6 +74,9 @@
         var entitiessection = document.getElementById("entitiessection");
         reproinfo.entities = reproinfo.entities.replace(",", "<br>");
         entitiessection.innerHTML = reproinfo.entities;
+
+        var image1 = document.getElementById("screenshot1").src = "images/huffmeme.jpg";
+
     </script>
     </body>
 </html>
