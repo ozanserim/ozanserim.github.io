@@ -2,29 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Repro</title>
     <link rel="stylesheet" href="repro.css">
 
 </head>
 <body>
     <h3>Section 1</h3>
-        <p id="p1">
+        <p id="section1">
         <!-- Some text -->
         </p>
 
     <h3>Section 2</h3>
-        <p id ="p2">
+        <p id ="section2">
         <!-- Some text -->
         </p>
-
-
     <script>
-        var ptext = document.getElementById("p1");
-        ptext.innerHTML = "New text!";
+        var ptext = document.getElementById("section1");
+        ptext.innerHTML = "Lorem ipsum ABC";
 
-        var ptext = document.getElementById("p2");
-        ptext.innerHTML = "More new text!";
-
+        var ptext = document.getElementById("section2");
+        ptext.innerHTML = "Lorem ipsum XYZ";
     </script>
-</body>
+    </body>
 </html>
