@@ -1,6 +1,6 @@
 p {
     color: dimgray; text-decoration: underline;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 body {
@@ -9,6 +9,6 @@ body {
 
 h3 {
     border-top: 1px solid gray;
-    color: darkslategray;
-    background-color: whitesmoke;
+    color: #3D3C3A;
+    background-color: white;
 }

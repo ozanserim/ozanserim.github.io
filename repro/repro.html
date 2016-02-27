@@ -4,24 +4,88 @@
     <meta charset="UTF-8">
     <title>Repro</title>
     <link rel="stylesheet" href="repro.css">
+    <script src="jsoneditor.js"></script>
 
 </head>
 <body>
-    <h3>Section 1</h3>
-        <p id="section1">
+    <h3>User</h3>
+        <p id="usersection">
         <!-- Some text -->
         </p>
 
-    <h3>Section 2</h3>
-        <p id ="section2">
+    <h3>Avatar</h3>
+        <p id ="avatarsection">
         <!-- Some text -->
         </p>
+
+    <h3>Place</h3>
+    <p id ="placesection">
+        <!-- Some text -->
+    </p>
+
+    <h3>Position</h3>
+    <p id ="positionsection">
+        <!-- Some text -->
+    </p>
+
+    <h3>Scene</h3>
+    <p id ="scenesection">
+        <!-- Some text -->
+    </p>
+
+    <h3>Entities</h3>
+    <p id ="entitiessection">
+        <!-- Some text -->
+    </p>
+
+    <h3>Props</h3>
+    <p id ="propssection">
+        <!-- Some text -->
+    </p>
+
+    <h3>Lights</h3>
+    <p id ="lightssection">
+        <!-- Some text -->
+    </p>
+
+    <h3>Animation</h3>
+    <p id ="animationsection">
+        <!-- Some text -->
+    </p>
+
+    <h3>Scripts</h3>
+    <p id ="scriptssection">
+        <!-- Some text -->
+    </p>
+
     <script>
-        var ptext = document.getElementById("section1");
-        ptext.innerHTML = "Lorem ipsum ABC";
+        var reproinfo = {
+            user: "ozan",
+            avatar: "MyAvatar.skeletonModelURL",
+            place: "location.href",
+            position: "MyAvatar.position or location.href",
+            scene: "JSON.stringify(Scene)",
+            entities: "entity1, entity2"
+        };
 
-        var ptext = document.getElementById("section2");
-        ptext.innerHTML = "Lorem ipsum XYZ";
+        var usersection = document.getElementById("usersection");
+        usersection.innerHTML = reproinfo.user;
+
+        var avatarsection = document.getElementById("avatarsection");
+        avatarsection.innerHTML = reproinfo.avatar;
+
+        var placesection = document.getElementById("placesection");
+        placesection.innerHTML = reproinfo.place;
+
+        var positionsection = document.getElementById("positionsection");
+        positionsection.innerHTML = reproinfo.position;
+
+        var scenesection = document.getElementById("scenesection");
+        scenesection.innerHTML = reproinfo.scene;
+
+        var entitiessection = document.getElementById("entitiessection");
+        reproinfo.entities = reproinfo.entities.replace(",", "<br>");
+        entitiessection.innerHTML = reproinfo.entities;
     </script>
     </body>
 </html>

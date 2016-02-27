@@ -18,6 +18,7 @@ Lights
 Animation
 Domain
 Coordinates
+Scripts
 
 
 Use case
@@ -77,3 +78,25 @@ var webView = new WebWindow('Entity Properties', url, 200, 280, true);
 
 
 no info about webView
+
+find
+
+currentAPI
+
+for (var p in MyAvatar) print(p)
+
+
+JSON.stringify JSON.parse
+
+JSON.stringify(Scene)
+{"objectName":"","shouldRenderAvatars":true,"shouldRenderEntities":true,"stage":{"objectName":"","location":{"objectName":"","longitude":122.40699768066406,"latitude":37.777000427246094,"altitude":0.029999999329447746},"time":{"objectName":"","hour":12,"day":60},"keyLight":{"objectName":"","color":{"x":1,"y":1,"z":1},"intensity":1,"ambientIntensity":1,"direction":{"x":0,"y":-0.7071068286895752,"z":0.7071068286895752}},"sunModel":false,"backgroundMode":"skybox"}}
+
+Entities.dumpTree()
+findEntitiesInBox(glm::vec3,glm::vec3)
+findEntitiesInBox(glm::vec3,float)
+
+MyAvatar.skeletonModelURL
+http://..../.fst
+
+location.href
+hifi://ozan/2.01026e-05,0.540076,-0.000571175/-4.939e-05,0.295829,0.00015944,0.955241
