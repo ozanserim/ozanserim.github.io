@@ -1,0 +1,14 @@
+p {
+    color: dimgray; text-decoration: underline;
+    background-color: whitesmoke;
+}
+
+body {
+    font: 16px "Futura";
+}
+
+h3 {
+    border-top: 1px solid gray;
+    color: darkslategray;
+    background-color: whitesmoke;
+}
