@@ -29,6 +29,19 @@ Use case
 - HF displays an area for the user to enter free-form text.
 - The user enters text and sends the report to HF.
 
+System UC
+-----------
+- User starts repro.js
+- repro.js gets repro info from HF.
+- repro.js displays repro.html in HF.
+- repro.js initiates a connection with reprohandler.js
+- repro.js sends repro info to reprohandler.js
+- reprohandler.js updates repro.html
+- user adds addition text info and clicks send.
+- reprohandler.js send the info to either the disk, to github or to asana (TBD).
+
+
+
 
 Samples
 --------
