@@ -9,6 +9,13 @@ function repro(){
         height: 700,
         visible: true
     });
+
+    if (key.text === "s") {
+        if (ctrlIsPressed === true) {
+            noteString = "Snapshot taken.";
+            createNotification(noteString, NotificationType.SNAPSHOT);
+        }
+    }
     //Script.stop();
 }
 repro();
