@@ -109,3 +109,35 @@ SnapshotShareDialog_QMLTYPE_234::uploadSnapshot(const QString& snapshot)
 
 Google's Report a Bug tool
 http://stackoverflow.com/questions/4912092/using-html5-canvas-javascript-to-take-screenshots
+
+
+var window = new OverlayWebWindow(…);
+window.eventBridge.emitScriptEvent(JSON.stringify(DATA_TO_SEND));
+
+EventBridge.scriptEventReceived.connect(function(dataString) {
+    var data = JSON.parse(dataString);
+  });
+
+
+  ---------------
+
+  MODEL PROPERTIES IN EDITPROPERTIES.HTML
+
+  <div class="model-section property">
+          <div class="label">Model URL</div>
+          <div class="value">
+              <input type="text" id="property-model-url" class="url"></input>
+          </div>
+      </div>
+      <div class="model-section property">
+          <div class="label">Collision Model URL</div>
+          <div class="value">
+              <input type="text" id="property-collision-model-url" class="url"></input>
+          </div>
+      </div>
+      <div class="model-section property">
+          <div class="label">Animation URL</div>
+          <div class="value">
+              <input type="text" id="property-model-animation-url" class="url"></input>
+          </div>
+      </div>

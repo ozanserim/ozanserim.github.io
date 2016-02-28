@@ -46,7 +46,18 @@
 
     </p>
 
+    <script type="text/javascript" src="eventBridgeLoader.js"></script>
+
     <script>
+        function loaded() {
+            openEventBridge(function () {
+                if (window.EventBridge !== undefined) {
+                    var properties;
+                    EventBridge.scriptEventReceived.connect(function (data) {
+                    });
+                }
+            });
+        }
         var reproinfo = {
             user: "ozan",
             avatar: "MyAvatar.skeletonModelURL",
