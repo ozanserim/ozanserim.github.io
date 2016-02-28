@@ -118,6 +118,7 @@ EventBridge.scriptEventReceived.connect(function(dataString) {
     var data = JSON.parse(dataString);
   });
 
+[02/27 16:43:24] [WARNING] WebWindow views are deprecated. Use OverlayWebWindow instead
 
   ---------------
 
