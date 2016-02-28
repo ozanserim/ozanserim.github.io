@@ -3,7 +3,7 @@
  */
 function repro(){
     var window = new OverlayWebWindow({
-        title: 'Google',
+        title: 'Repro',
         source: "https://ozanserim.github.io/repro/repro.html",
         width: 900,
         height: 700,
