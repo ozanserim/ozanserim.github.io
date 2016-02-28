@@ -2,7 +2,7 @@
  * Created by ozan on 2/25/16.
  */
 function repro(){
-    var window new OverlayWebWindow({
+    var window = new OverlayWebWindow({
         title: 'Google',
         source: "https://ozanserim.github.io/repro/repro.html",
         width: 900,
