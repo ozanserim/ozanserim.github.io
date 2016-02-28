@@ -141,3 +141,16 @@ EventBridge.scriptEventReceived.connect(function(dataString) {
               <input type="text" id="property-model-animation-url" class="url"></input>
           </div>
       </div>
+
+
+
+      ____________________
+
+
+      Log
+[02/27 16:09:14] [DEBUG] Done downloading script at: "https://raw.githubusercontent.com/ozanserim/ozanserim.github.io/master/repro/repro.js"
+[02/27 16:09:14] [DEBUG] Logging activity "loaded_script"
+[02/27 16:09:14] [DEBUG] "[object Object]"
+[02/27 16:09:14] [DEBUG] Created window with ID 2
+[02/27 16:09:14] [DEBUG] Connecting JS messaging to Hifi Logging
+[02/27 16:09:14] [DEBUG] Url changed to https://ozanserim.github.io/repro/repro.html

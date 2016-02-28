@@ -54,6 +54,11 @@
                 if (window.EventBridge !== undefined) {
                     var properties;
                     EventBridge.scriptEventReceived.connect(function (data) {
+                        var testdata = JSON.parse(data);
+
+                        var usersection = document.getElementById("usersection");
+                        usersection.innerHTML = testdata;
+
                     });
                 }
             });
@@ -66,9 +71,6 @@
             scene: "JSON.stringify(Scene)",
             entities: "entity1, entity2"
         };
-
-        var usersection = document.getElementById("usersection");
-        usersection.innerHTML = reproinfo.user;
 
         var avatarsection = document.getElementById("avatarsection");
         avatarsection.innerHTML = reproinfo.avatar;
