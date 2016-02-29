@@ -120,6 +120,22 @@ EventBridge.scriptEventReceived.connect(function(dataString) {
 
 [02/27 16:43:24] [WARNING] WebWindow views are deprecated. Use OverlayWebWindow instead
 
+
+=================
+or
+
+function loaded() {
+            openEventBridge(function () {
+                if (window.EventBridge !== undefined) {
+                    EventBridge.scriptEventReceived.connect(function (data) {
+                        var testdata = JSON.parse(data);
+                        var usersection = document.getElementById("usersection");
+                        usersection.innerHTML = testdata;
+                    });
+                }
+            });
+        }
+
   ---------------
 
   MODEL PROPERTIES IN EDITPROPERTIES.HTML

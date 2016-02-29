@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d04f2d86-0cbb-4388-b0ea-9759cdce1020" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/repro.js" afterPath="$PROJECT_DIR$/repro/repro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/repro.html" afterPath="$PROJECT_DIR$/repro/repro.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/specs.txt" afterPath="$PROJECT_DIR$/repro/specs.txt" />
     </list>
     <ignored path="for_github.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="repro.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="repro.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/repro/repro.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.083334">
-              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.42753622">
+              <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#p#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -66,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="repro.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="repro.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repro/repro.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.076238886">
-              <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -80,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/repro/specs.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="120" column="87" selection-start-line="120" selection-start-column="87" selection-end-line="120" selection-end-column="87" />
+              <caret line="110" column="45" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -121,10 +122,10 @@
         <option value="$PROJECT_DIR$/repro/repro.css" />
         <option value="$PROJECT_DIR$/repro/examples/entityProperties.html" />
         <option value="$PROJECT_DIR$/repro/eventBridgeLoader.js" />
-        <option value="$PROJECT_DIR$/repro/specs.txt" />
         <option value="$PROJECT_DIR$/repro/examples/edit1.js" />
-        <option value="$PROJECT_DIR$/repro/repro.html" />
         <option value="$PROJECT_DIR$/repro/repro.js" />
+        <option value="$PROJECT_DIR$/repro/specs.txt" />
+        <option value="$PROJECT_DIR$/repro/repro.html" />
       </list>
     </option>
   </component>
@@ -136,8 +137,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="487" />
     <option name="y" value="23" />
-    <option name="width" value="1232" />
-    <option name="height" value="884" />
+    <option name="width" value="1240" />
+    <option name="height" value="949" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -329,10 +330,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="487" y="23" width="1232" height="884" extended-state="0" />
+    <frame x="487" y="23" width="1240" height="949" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18425325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18306452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -555,10 +556,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/repro/examples/entityFloor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.111111">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/specs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="45" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/repro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/repro/repro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.083334">
-          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.42753622">
+          <caret line="57" column="35" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#p#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -571,30 +596,6 @@
             <element signature="n#style#0;n#img#0;n#p#6;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#1;n#p#6;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repro/examples/entityFloor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.111111">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repro/specs.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="120" column="87" selection-start-line="120" selection-start-column="87" selection-end-line="120" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repro/repro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.076238886">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
