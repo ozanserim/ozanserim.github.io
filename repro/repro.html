@@ -50,7 +50,10 @@
 
     <script>
         EventBridge.scriptEventReceived.connect(function(dataString) {
-            var data = JSON.parse(dataString);
+            var data = dataString;
+            var avatarsection = document.getElementById("avatarsection");
+            avatarsection.innerHTML = dataString;
+
         });
         var reproinfo = {
             user: "ozan",
@@ -61,8 +64,8 @@
             entities: "entity1, entity2"
         };
 
-        var avatarsection = document.getElementById("avatarsection");
-        avatarsection.innerHTML = reproinfo.avatar;
+        //var avatarsection = document.getElementById("avatarsection");
+        //avatarsection.innerHTML = reproinfo.avatar;
 
         var placesection = document.getElementById("placesection");
         placesection.innerHTML = reproinfo.place;

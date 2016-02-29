@@ -4,7 +4,7 @@
 function repro(){
     var webView = new WebWindow('Repro2', "https://ozanserim.github.io/repro/repro.html", 800, 600, false);
     webView.setVisible(true);
-    webView.eventBridge.emitScriptEvent(JSON.stringify("test_data"));
+    webView.eventBridge.emitScriptEvent("test_data");
     //Script.stop();
 }
 repro();
