@@ -52,7 +52,6 @@
         function loaded() {
             openEventBridge(function () {
                 if (window.EventBridge !== undefined) {
-                    var properties;
                     EventBridge.scriptEventReceived.connect(function (data) {
                         var testdata = JSON.parse(data);
 
