@@ -1,0 +1,16 @@
+Set position
+Set scale
+Start and stop animation
+Display popup window
+
+Set chars to center
+
+
+Reference
+-----------
+
+Entity Properties Docs
+http://jsref.docs.highfidelity.com/docs/entity-properties
+
+baseballCrowd.js
+line 29

@@ -119,6 +119,26 @@ EventBridge.scriptEventReceived.connect(function(dataString) {
   });
 
 [02/27 16:43:24] [WARNING] WebWindow views are deprecated. Use OverlayWebWindow instead
+___________________
+
+function initialize() {
+        toolBar = new ToolBar(0, 0, ToolBar.VERTICAL, "highfidelity.edit.toolbar", function(windowDimensions, toolbar) {
+            return {
+                x: windowDimensions.x - 8 - toolbar.width,
+                y: (windowDimensions.y - toolbar.height) / 2
+            };
+        });
+
+__________________
+
+print("Model selected: " + foundEntity);
+____________________
+
+selectionDisplay.select(selectedEntityID, event);
+______________________
+Window.alert(INSUFFICIENT_PERMISSIONS_ERROR_MSG);
+_________________________
+
 
 
 =================
@@ -165,9 +185,7 @@ function loaded() {
 
 
       Log
-[02/27 16:09:14] [DEBUG] Done downloading script at: "https://raw.githubusercontent.com/ozanserim/ozanserim.github.io/master/repro/repro.js"
-[02/27 16:09:14] [DEBUG] Logging activity "loaded_script"
-[02/27 16:09:14] [DEBUG] "[object Object]"
-[02/27 16:09:14] [DEBUG] Created window with ID 2
-[02/27 16:09:14] [DEBUG] Connecting JS messaging to Hifi Logging
-[02/27 16:09:14] [DEBUG] Url changed to https://ozanserim.github.io/repro/repro.html
+
+
+
+
