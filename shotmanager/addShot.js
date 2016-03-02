@@ -17,7 +17,7 @@ var shot1 = Entities.addEntity({
     position: {x:0, y:0, z:0},
     dimension: {x:fightNewDim.x, y:fightNewDim.y, z:fightNewDim.z},
     animation: {url: "https://hifi-content.s3.amazonaws.com/ozan/dev/shots/minotaur_fight/minotaur_fight.fbx", running: true, currentFrame: 0, loop: true},
-    script: "file:///Users/ozan/WebstormProjects/ozanserim/shotmanager/startstopAnimation2.js"
+    //script: "file:///Users/ozan/WebstormProjects/ozanserim/shotmanager/startstopAnimation2.js"
 });
 print("modelURL = " + JSON.stringify(Entities.getEntityProperties(shot1).modelURL));
 var audio1 = SoundCache.getSound ("https://hifi-content.s3.amazonaws.com/ozan/dev/shots/minotaur_fight/audio/1_Minotaur_Fight_Final.wav");
