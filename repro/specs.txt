@@ -1,6 +1,11 @@
 QA Tools Specs
 ===============
 
+
+Hackathon
+-------------
+
+
 Overview
 ------
 Get domain info for qa
@@ -88,6 +93,7 @@ currentAPI
 
 for (var p in MyAvatar) print(p)
 
+JSON.stringify(Object.keys(MyAvatar))
 
 JSON.stringify JSON.parse
 

@@ -14,3 +14,38 @@ http://jsref.docs.highfidelity.com/docs/entity-properties
 
 baseballCrowd.js
 line 29
+
+Hackathon Notes
+---------------
+investigate mesh parts in FBX to fix geo phasing in and out.
+Sphere does not res in unless you got to its origin - does not appear in entity list.
+Geo explodes if you change scene and and upload.
+Export character anims in CM.
+
+
+
+
+Get assets
+	3 shots
+	do audio
+Script assets
+	moving blocks
+	position shot
+	startstopshot
+Upgrade assets.
+
+
+Specs
+-----------
+maze
+fight
+kiss
+dinner
+
+
+position
+
+terrace
+
+fight xyz
+kiss x+30,y,z
