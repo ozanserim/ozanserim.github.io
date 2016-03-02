@@ -15,7 +15,7 @@ var shot1 = Entities.addEntity({
     type: "Model",
     modelURL: "https://hifi-content.s3.amazonaws.com/ozan/dev/shots/minotaur_fight/minotaur_fight.fbx",
     position: {x:0, y:0, z:0},
-    dimension: {x:fightNewDim.x, y:fightNewDim.y, z:fightNewDim.z},
+    dimension: {x: 40.2, y: 12.3, z:22.4},
     animation: {url: "https://hifi-content.s3.amazonaws.com/ozan/dev/shots/minotaur_fight/minotaur_fight.fbx", running: true, currentFrame: 0, loop: true},
     //script: "file:///Users/ozan/WebstormProjects/ozanserim/shotmanager/startstopAnimation2.js"
 });
@@ -30,7 +30,7 @@ var shot2 = Entities.addEntity({
     type: "Model",
     modelURL: "https://hifi-content.s3.amazonaws.com/ozan/dev/shots/kiss/kiss2.fbx",
     position: {x:0, y:0, z:0},
-    dimension: {x:kissNewDim.x, y:kissNewDim.y, z:kissNewDim.z},
+    dimension: {x:1.2, y:1.5, z:1.2},
     animation: {url: "https://hifi-content.s3.amazonaws.com/ozan/dev/shots/kiss/kiss2.fbx", running: true, currentFrame: 0, loop: true},
     //script: "file:///Users/ozan/WebstormProjects/ozanserim/shotmanager/startstopAnimation2.js"
 });
