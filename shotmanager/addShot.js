@@ -28,7 +28,7 @@ Script.setTimeout(function(){
 
 var shot2 = Entities.addEntity({
     type: "Model",
-    modelURL: "https://hifi-content.s3.amazonaws.com/ozan/dev/shots/kiss/kiss2.fbx",
+    modelURL: "https://hifi-content.s3.amazonaws.com/ozan/dev/shots/kiss/kiss_cm.fbx",
     position: {x:0, y:0, z:0},
     dimension: {x:1.2, y:1.5, z:1.2},
     animation: {url: "https://hifi-content.s3.amazonaws.com/ozan/dev/shots/kiss/kiss2.fbx", running: true, currentFrame: 0, loop: true},
