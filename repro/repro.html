@@ -5,7 +5,8 @@
     <title>Repro</title>
     <link rel="stylesheet" href="repro.css">
     <script src="jsoneditor.js"></script>
-
+    <script type="text/javascript" src="qrc:///qtwebchannel/qwebchannel.js"></script>
+    <script type="text/javascript" src="eventBridgeLoader.js"></script>
 </head>
 <body>
     <h3>User</h3>
@@ -16,14 +17,14 @@
     <h3>Avatar</h3>
         <p id ="avatarsection">
         <!-- Some text -->
-        </p>
+        </p/>
 
-    <h3>Place</h3>
-    <p id ="placesection">
+    <h3>Location</h3>
+    <p id ="locationsection">
         <!-- Some text -->
     </p>
 
-    <h3>Position</h3>
+    <h3>Avatar Position</h3>
     <p id ="positionsection">
         <!-- Some text -->
     </p>
@@ -46,15 +47,24 @@
 
     </p>
 
-    <script type="text/javascript" src="eventBridgeLoader.js"></script>
 
     <script>
-        EventBridge.scriptEventReceived.connect(function(dataString) {
-            //var data = dataString;
-            var avatarsection = document.getElementById("avatarsection");
-            avatarsection.innerHTML = "randomstring";
+        var myBridge;
+        window.onload = function() {
+            console.log('window loaded, opening event bridge')
+            openEventBridge(function(eventBridge) {
+                myBridge = eventBridge;
+                myBridge.scriptEventReceived.connect(function(message) {
+                console.log("HTML side received message: " + message);
+                 var usersection = document.getElementById("usersection");
+                    usersection.innerHTML = message;
 
-        });
+
+                });
+            });
+        }
+
+
         var reproinfo = {
             user: "ozan",
             avatar: "MyAvatar.skeletonModelURL",
@@ -64,21 +74,31 @@
             entities: "entity1, entity2"
         };
 
-        //var avatarsection = document.getElementById("avatarsection");
-        //avatarsection.innerHTML = reproinfo.avatar;
+        //Test
+        var text = '{"employees":[{"firstName":"John","lastName":"Doe" },{"firstName":"Anna","lastName":"Smith" }, {"firstName":"Peter","lastName":"Jones" }]}';
 
-        var placesection = document.getElementById("placesection");
-        placesection.innerHTML = reproinfo.place;
+        obj = JSON.parse(text);
+        document.getElementById("avatarsection").innerHTML = obj.employees[1].firstName + " " + obj.employees[1].lastName;
+        //End test
 
+        var locationsection = document.getElementById("locationsection");
+        locationsection.innerHTML = reproinfo.place;
+
+        var posText ='{"x":7229.26318359375,"y":4950.5380859375,"z":5042.74951171875}';
+        var posObj = JSON.parse(posText);
         var positionsection = document.getElementById("positionsection");
-        positionsection.innerHTML = reproinfo.position;
+        positionsection.innerHTML = "x = " + posObj.x + " <br> y = " + posObj.y + " <br> z =  " + posObj.z;
 
         var scenesection = document.getElementById("scenesection");
         scenesection.innerHTML = reproinfo.scene;
 
+        var modUrlText = '{"modelURL": "https://s3.amazonaws.com/hifi-public/marketplace/hificontent/ozan/PalmTree.fbx"}';
+        var modPosText = '{"x":7229.26318359375,"y":4950.5380859375,"z":5042.74951171875}';
+        var modURLObj = JSON.parse(modUrlText);
+        var modPosObj = JSON.parse(modPosText);
+
         var entitiessection = document.getElementById("entitiessection");
-        reproinfo.entities = reproinfo.entities.replace(",", "<br>");
-        entitiessection.innerHTML = reproinfo.entities;
+        entitiessection.innerHTML = modURLObj.modelURL + "<br> x = " + modPosObj.x;
 
         document.getElementById("screenshot1").src = "images/huffmeme.jpg";
         document.getElementById("screenshot2").src = "images/huffmeme.jpg";

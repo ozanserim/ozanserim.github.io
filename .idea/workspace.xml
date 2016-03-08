@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d04f2d86-0cbb-4388-b0ea-9759cdce1020" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shotmanager/addShot.js" afterPath="$PROJECT_DIR$/shotmanager/addShot.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/eventBridgeLoader.js" afterPath="$PROJECT_DIR$/repro/eventBridgeLoader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/examples/eventBridgeLoader.js" afterPath="$PROJECT_DIR$/repro/examples/eventBridgeLoader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/repro.html" afterPath="$PROJECT_DIR$/repro/repro.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/repro.js" afterPath="$PROJECT_DIR$/repro/repro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repro/specs.txt" afterPath="$PROJECT_DIR$/repro/specs.txt" />
     </list>
     <ignored path="for_github.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,64 +31,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="addShot.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shotmanager/addShot.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53699285">
-              <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shotmanager/Test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.3846154">
-              <caret line="28" column="0" selection-start-line="9" selection-start-column="4" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shotmanager/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="specs.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repro/specs.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="32" />
+            <state vertical-scroll-proportion="-15.62963">
+              <caret line="117" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="specs.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shotmanager/specs.txt">
+      <file leaf-file-name="repro.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repro/repro.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="57" />
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dice.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/dice.js">
+      <file leaf-file-name="repro.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/repro/repro.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+            <state vertical-scroll-proportion="-0.14285715">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#p#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#p#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#p#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#p#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#p#6;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventBridgeLoader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repro/eventBridgeLoader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="repro.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repro/repro.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="0" selection-start-line="3" selection-start-column="1" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repro/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="16" column="113" selection-start-line="10" selection-start-column="8" selection-end-line="16" selection-end-column="113" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,21 +131,24 @@
         <option value="$PROJECT_DIR$/repro/reprohandler.js" />
         <option value="$PROJECT_DIR$/repro/repro.css" />
         <option value="$PROJECT_DIR$/repro/examples/entityProperties.html" />
-        <option value="$PROJECT_DIR$/repro/eventBridgeLoader.js" />
         <option value="$PROJECT_DIR$/repro/examples/edit1.js" />
-        <option value="$PROJECT_DIR$/repro/repro.js" />
-        <option value="$PROJECT_DIR$/repro/repro.html" />
         <option value="$PROJECT_DIR$/repro/examples/edit.js" />
         <option value="$PROJECT_DIR$/examples/dice.js" />
         <option value="$PROJECT_DIR$/shotmanager/startstopAnimation.js" />
         <option value="$PROJECT_DIR$/shotmanager/startstopAnimation2.js" />
-        <option value="$PROJECT_DIR$/repro/specs.txt" />
         <option value="$PROJECT_DIR$/shotmanager/specs.txt" />
         <option value="$PROJECT_DIR$/repro/test.js" />
         <option value="$PROJECT_DIR$/shotmanager/glMatrix.js" />
         <option value="$PROJECT_DIR$/shotmanager/Test.html" />
         <option value="$PROJECT_DIR$/shotmanager/test.js" />
         <option value="$PROJECT_DIR$/shotmanager/addShot.js" />
+        <option value="$PROJECT_DIR$/repro/test.html" />
+        <option value="$PROJECT_DIR$/repro/specs.txt" />
+        <option value="$PROJECT_DIR$/repro/findEntities.js" />
+        <option value="$PROJECT_DIR$/repro/examples/eventBridgeLoader.js" />
+        <option value="$PROJECT_DIR$/repro/eventBridgeLoader.js" />
+        <option value="$PROJECT_DIR$/repro/repro.js" />
+        <option value="$PROJECT_DIR$/repro/repro.html" />
       </list>
     </option>
   </component>
@@ -146,10 +158,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
-    <option name="y" value="27" />
-    <option name="width" value="1378" />
-    <option name="height" value="935" />
+    <option name="x" value="256" />
+    <option name="y" value="23" />
+    <option name="width" value="1527" />
+    <option name="height" value="897" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -176,7 +188,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -223,13 +234,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="for_github" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ozanserim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hifi_copy" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -247,11 +277,8 @@
       <recent name="$PROJECT_DIR$/repro/examples" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Test.html">
+  <component name="RunManager" selected="JavaScript Debug.repro.html (1)">
     <configuration default="false" name="repro.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/for_github/repro/repro.html">
-      <method />
-    </configuration>
-    <configuration default="false" name="repro.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="repro.js" working-dir="$PROJECT_DIR$/repro">
       <method />
     </configuration>
     <configuration default="false" name="doc5.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/for_github/repro/sample5/doc5.html">
@@ -261,6 +288,9 @@
       <method />
     </configuration>
     <configuration default="false" name="Test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/for_github/shotmanager/Test.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/for_github/repro/test.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -313,18 +343,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.repro.html (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.repro.js" />
-      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.doc5.html" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.entityProperties.html" />
-      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.Test.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.doc5.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.entityProperties.html" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.Test.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Test.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.repro.html (1)" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.entityProperties.html" />
-        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.doc5.html" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.repro.js" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.repro.html (1)" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.Test.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.entityProperties.html" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.doc5.html" />
       </list>
     </recent_temporary>
   </component>
@@ -342,10 +372,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="27" width="1378" height="935" extended-state="0" />
+    <frame x="256" y="23" width="1527" height="897" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24020319" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2167649" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -376,16 +406,107 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/repro/examples/entityPropertiesOzan.html">
+    <entry file="file://$PROJECT_DIR$/shotmanager/Test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="9" selection-start-column="4" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shotmanager/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/specs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shotmanager/specs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shotmanager/addShot.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shotmanager/Test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="9" selection-start-column="4" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shotmanager/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/specs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shotmanager/specs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/examples/entityPropertiesOzan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -393,7 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="53" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -401,9 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -425,9 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="85" column="18" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!block;n#spawnModel#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -456,9 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="85" column="18" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!block;n#spawnModel#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -480,9 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.89944136">
           <caret line="85" column="18" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!block;n#spawnModel#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -504,7 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -512,25 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <marker date="1456537651000" expanded="true" signature="59123:59648" placeholder="..." />
-            <marker date="1456537651000" expanded="true" signature="59144:59626" placeholder="..." />
-            <marker date="1456537651000" expanded="true" signature="771415:771507" placeholder="..." />
-            <marker date="1456537651000" expanded="true" signature="779939:780029" placeholder="..." />
-            <marker date="1456537651000" expanded="true" signature="780313:780403" placeholder="..." />
-            <marker date="1456537651000" expanded="true" signature="971813:973003" placeholder="..." />
-            <marker date="1456537651000" expanded="true" signature="971929:972313" placeholder="..." />
-            <marker date="1456537651000" expanded="true" signature="972350:972648" placeholder="..." />
-            <marker date="1456537651000" expanded="true" signature="972687:972994" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repro/repro.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.017123288">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -575,21 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repro/eventBridgeLoader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65818185">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repro/examples/libraries/overlayUtils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16324063">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -597,9 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33252722">
           <caret line="940" column="50" selection-start-line="940" selection-start-column="37" selection-end-line="940" selection-end-column="50" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -607,9 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -617,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -625,25 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.017564403">
           <caret line="34" column="53" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repro/repro.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16403402">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/dice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,23 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repro/repro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10757946">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="41" />
-          <folding>
-            <element signature="n#p#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#p#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#p#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#p#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#p#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#p#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#p#6;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,7 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48099762">
           <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,30 +716,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33251533">
           <caret line="50" column="25" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shotmanager/specs.txt">
+    <entry file="file://$PROJECT_DIR$/shotmanager/addShot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.58064514">
+          <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shotmanager/Test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3846154">
+        <state vertical-scroll-proportion="0.55925435">
           <caret line="28" column="0" selection-start-line="9" selection-start-column="4" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repro/specs.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -719,11 +743,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shotmanager/addShot.js">
+    <entry file="file://$PROJECT_DIR$/shotmanager/specs.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53699285">
-          <caret line="30" column="80" selection-start-line="30" selection-start-column="80" selection-end-line="30" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.14838709">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="57" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/dice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019354839">
+          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/examples/eventBridgeLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.175">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/findEntities.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6375">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/eventBridgeLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/repro.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="0" selection-start-line="3" selection-start-column="1" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="16" column="113" selection-start-line="10" selection-start-column="8" selection-end-line="16" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/specs.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.62963">
+          <caret line="117" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/repro.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repro/repro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.14285715">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="n#p#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

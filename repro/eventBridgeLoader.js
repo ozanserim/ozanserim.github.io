@@ -56,4 +56,3 @@ openEventBridge = function(callback) {
         });
     }
 }
-
