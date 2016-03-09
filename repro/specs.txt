@@ -57,9 +57,16 @@ Avatar Position
 JSON.stringify(MyAvatar.position)
 {"x":7229.26318359375,"y":4950.5380859375,"z":5042.74951171875}
 
-
 Samples
 --------
+        var reproinfo = {
+            user: "ozan",
+            avatar: "MyAvatar.skeletonModelURL",
+            place: "location.href",
+            position: "MyAvatar.position or location.href",
+            scene: "JSON.stringify(Scene)",
+            entities: "entity1, entity2"
+        };
 
 Avatar
 var myPosition = MyAvatar.position;

@@ -10,14 +10,14 @@
 </head>
 <body>
     <h3>User</h3>
-        <p id="usersection">
+    <p id ="usersection">
         <!-- Some text -->
-        </p>
+    </p>
 
     <h3>Avatar</h3>
-        <p id ="avatarsection">
+    <p id ="avatarsection">
         <!-- Some text -->
-        </p/>
+    </p>
 
     <h3>Location</h3>
     <p id ="locationsection">
@@ -47,7 +47,6 @@
 
     </p>
 
-
     <script>
         var myBridge;
         window.onload = function() {
@@ -56,52 +55,39 @@
                 myBridge = eventBridge;
                 myBridge.scriptEventReceived.connect(function(message) {
                 console.log("HTML side received message: " + message);
-                 var usersection = document.getElementById("usersection");
-                    usersection.innerHTML = message;
-
-
+                    updatePage(message);
                 });
             });
         }
 
+        function updatePage(message){
+            var msgObj = JSON.parse(message);
 
-        var reproinfo = {
-            user: "ozan",
-            avatar: "MyAvatar.skeletonModelURL",
-            place: "location.href",
-            position: "MyAvatar.position or location.href",
-            scene: "JSON.stringify(Scene)",
-            entities: "entity1, entity2"
-        };
+            document.getElementById("usersection").innerHTML = "Ozan";
 
-        //Test
-        var text = '{"employees":[{"firstName":"John","lastName":"Doe" },{"firstName":"Anna","lastName":"Smith" }, {"firstName":"Peter","lastName":"Jones" }]}';
+            document.getElementById("avatarsection").innerHTML = msgObj.avatar;
 
-        obj = JSON.parse(text);
-        document.getElementById("avatarsection").innerHTML = obj.employees[1].firstName + " " + obj.employees[1].lastName;
-        //End test
+            document.getElementById("locationsection").innerHTML = msgObj.location;
 
-        var locationsection = document.getElementById("locationsection");
-        locationsection.innerHTML = reproinfo.place;
+            //var posText ='{"x":7229.26318359375,"y":4950.5380859375,"z":5042.74951171875}';
+            //var posObj = JSON.parse(posText);
+            //document.getElementById("positionsection").innerHTML = "x = " + posObj.x + " <br> y = " + posObj.y + " <br> z =  " + posObj.z;
+            document.getElementById("positionsection").innerHTML = msgObj.position;
 
-        var posText ='{"x":7229.26318359375,"y":4950.5380859375,"z":5042.74951171875}';
-        var posObj = JSON.parse(posText);
-        var positionsection = document.getElementById("positionsection");
-        positionsection.innerHTML = "x = " + posObj.x + " <br> y = " + posObj.y + " <br> z =  " + posObj.z;
-
-        var scenesection = document.getElementById("scenesection");
-        scenesection.innerHTML = reproinfo.scene;
-
-        var modUrlText = '{"modelURL": "https://s3.amazonaws.com/hifi-public/marketplace/hificontent/ozan/PalmTree.fbx"}';
-        var modPosText = '{"x":7229.26318359375,"y":4950.5380859375,"z":5042.74951171875}';
-        var modURLObj = JSON.parse(modUrlText);
-        var modPosObj = JSON.parse(modPosText);
-
-        var entitiessection = document.getElementById("entitiessection");
-        entitiessection.innerHTML = modURLObj.modelURL + "<br> x = " + modPosObj.x;
-
-        document.getElementById("screenshot1").src = "images/huffmeme.jpg";
-        document.getElementById("screenshot2").src = "images/huffmeme.jpg";
+//            var scenesection = document.getElementById("scenesection");
+//            scenesection.innerHTML = reproinfo.scene;
+//
+//            var modUrlText = '{"modelURL": "https://s3.amazonaws.com/hifi-public/marketplace/hificontent/ozan/PalmTree.fbx"}';
+//            var modPosText = '{"x":7229.26318359375,"y":4950.5380859375,"z":5042.74951171875}';
+//            var modURLObj = JSON.parse(modUrlText);
+//            var modPosObj = JSON.parse(modPosText);
+//
+//            var entitiessection = document.getElementById("entitiessection");
+//            entitiessection.innerHTML = modURLObj.modelURL + "<br> x = " + modPosObj.x;
+//
+            document.getElementById("screenshot1").src = "images/huffmeme.jpg";
+            document.getElementById("screenshot2").src = "images/huffmeme.jpg";
+        }
 
     </script>
     </body>
