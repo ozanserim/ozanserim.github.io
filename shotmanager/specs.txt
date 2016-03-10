@@ -1,3 +1,37 @@
+Assets
+-----------
+https://hifi-content.s3.amazonaws.com/ozan/dev/sets/sphere_maze/sphere_maze.fbx
+sphere_maze position ,7000,0
+sphere_maze size *
+dimensions: 170,150,0
+
+shot position
+-5000,5000,0
+
+fight
+https://hifi-content.s3.amazonaws.com/ozan/dev/shots/minotaur_fight/minotaur_fight.fbx
+position, -174.2518, 151.8066,2.5455
+yaw -96.5000
+
+kiss
+https://hifi-content.s3.amazonaws.com/ozan/dev/shots/kiss/kiss2.fbx
+
+
+dinner
+https://hifi-content.s3.amazonaws.com/ozan/dev/shots/dinner/boy_anim4.fbx
+https://hifi-content.s3.amazonaws.com/ozan/dev/shots/dinner/dad_table1.fbx
+pos -175.3846, 161.9100, 20.9786
+dim: 2.4977, 1.2748,2.5926
+
+chase
+https://hifi-content.s3.amazonaws.com/ozan/dev/shots/chase/chase.fbx
+position 12.7302, 196.0516, 129.8049
+yaw 13
+scale 500
+
+
+Use Cases
+----------------
 Set position
 Set scale
 Start and stop animation

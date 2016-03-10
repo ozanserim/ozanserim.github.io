@@ -29,22 +29,9 @@
         <!-- Some text -->
     </p>
 
-    <h3>Scene</h3>
-    <p id ="scenesection">
-        <!-- Some text -->
-    </p>
-
     <h3>Entities</h3>
     <p id ="entitiessection">
         <!-- Some text -->
-    </p>
-
-    <h3>Images</h3>
-    <p id ="imagessection">
-        <!-- Some images -->
-        <img id="screenshot1" style="width:400px;height:400px;">
-        <img id="screenshot2" style="width:400px;height:400px;">
-
     </p>
 
     <script>
@@ -74,6 +61,8 @@
             //document.getElementById("positionsection").innerHTML = "x = " + posObj.x + " <br> y = " + posObj.y + " <br> z =  " + posObj.z;
             document.getElementById("positionsection").innerHTML = msgObj.position;
 
+            document.getElementById("entitiessection").innerHTML = msgObj.entities;
+
 //            var scenesection = document.getElementById("scenesection");
 //            scenesection.innerHTML = reproinfo.scene;
 //
@@ -82,8 +71,6 @@
 //            var modURLObj = JSON.parse(modUrlText);
 //            var modPosObj = JSON.parse(modPosText);
 //
-//            var entitiessection = document.getElementById("entitiessection");
-//            entitiessection.innerHTML = modURLObj.modelURL + "<br> x = " + modPosObj.x;
 //
             document.getElementById("screenshot1").src = "images/huffmeme.jpg";
             document.getElementById("screenshot2").src = "images/huffmeme.jpg";
