@@ -4,9 +4,10 @@
 
 //create window and link to html page
 var reproWindow = new OverlayWebWindow({
-    title: 'Repro3',
+    title: 'Repro',
     //source: "file:///Users/ozan/WebstormProjects/ozanserim/repro/repro.html",
-    source: "C:\\Users\\ozan\\WebstormProjects\\ozanserim\\ozanserim.github.io\\repro\\repro.html",
+    //source: "C:\\Users\\ozan\\WebstormProjects\\ozanserim\\ozanserim.github.io\\repro\\repro.html",
+    source: "http://ozanserim.github.io/repro/repro.html",
     width: 800,
     height: 600,
     visible: false
