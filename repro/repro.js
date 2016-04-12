@@ -4,8 +4,10 @@
 
 //create window and link to html page
 var reproWindow = new OverlayWebWindow({
-    title: 'Repro3',
-    source: "file:///Users/ozan/WebstormProjects/ozanserim/repro/repro.html",
+    title: 'Repro',
+    //source: "file:///Users/ozan/WebstormProjects/ozanserim/repro/repro.html",
+    //source: "C:\\Users\\ozan\\WebstormProjects\\ozanserim\\ozanserim.github.io\\repro\\repro.html",
+    source: "http://ozanserim.github.io/repro/repro.html",
     width: 800,
     height: 600,
     visible: false
@@ -13,41 +15,68 @@ var reproWindow = new OverlayWebWindow({
 reproWindow.setVisible(true);
 reproWindow.raise();
 
-var myName = "Ozan";
-//var posText = JSON.stringify(MyAvatar.position);
-var myAvatar = MyAvatar.skeletonModelURL;
-var myLocation = location.href;
-var myPosition = JSON.stringify(MyAvatar.position);
-myPosition = myPosition.replace("{", "");
-myPosition = myPosition.replace("}", "");
-myPosition = myPosition.replace(/["]+/g, '');
-var message = '{"avatar": "'+myAvatar+'", "location": "'+myLocation+'", "position": "'+myPosition+'"}';
-//var message = '{"avatar": "'+myAvatar+'"}';
-//var message = '{"location": "'+myLocation+'"}';
-//var message = '{"position": "'+myPosition+'"}';
-print ("ozan message = " + message);
+var myName;
+var myAvatar;
+var myLocation;
+var myPosition;
+var myEntities;
+var message;
 
-getEntities();
+function getUser(){
+    myName = "Ozan";
+}
+function getAvatar(){
+    myAvatar = MyAvatar.skeletonModelURL;
+}
+function getLocation(){
+    myLocation = location.href;
+}
+function getPosition(){
+    myPosition = JSON.stringify(MyAvatar.position);
+    myPosition = myPosition.replace("{", "");
+    myPosition = myPosition.replace("}", "");
+    myPosition = myPosition.replace(/["]+/g, '');
+}
 
 function getEntities(){
-    entList= Entities.findEntities(MyAvatar.position, 100.0)
+    entList= Entities.findEntities(MyAvatar.position, 100.0);
     //print("entity length = " + entList.length);
-
+    //"Model", "https://hifi-content.s3.amazonaws.com/ozan/dev/props/sun_lowpoly/sun.fbx", {"x":0,"y":0,"z":0}
     for( i = 0; i < entList.length; i++){
         var modelTyp  = JSON.stringify(Entities.getEntityProperties(entList[i]).type);
         var modelUrl  = JSON.stringify(Entities.getEntityProperties(entList[i]).modelURL);
         var modelPos = JSON.stringify(Entities.getEntityProperties(entList[i]).position);
-
-        var entityInfo = modelTyp + ", "+modelUrl+", "+modelPos;
-        print ("entityInfo = " + entityInfo);
+        if (myEntities == null){
+            myEntities = modelTyp + ", "+modelUrl+", "+modelPos;
+        }
+        else{
+            myEntities = myEntities + "<br>" + modelTyp + ", "+modelUrl+", "+modelPos;
+        }
         //print("modelType: "+ modelTyp);
         //print("modelUrl: "+ modelUrl);
         //print("modelPos: "+ modelPos);
     }
+    myEntities = myEntities.replace(/["]+/g, '');
+    print ("entityInfo = " + myEntities);
+
 }
-//create eventBridge
+function setMessage(){
+    message = '{"avatar": "'+myAvatar+'", "location": "'+myLocation+'", "position": "'+myPosition+'", "entities": "'+myEntities+'"}';
+}
+
 Script.setTimeout(function(){
+    print ("TEST");
+    getUser();
+    getAvatar();
+    getLocation();
+    getPosition();
+    getEntities();
+    setMessage();
+
+    //var message = '{"avatar": "'+myAvatar+'"}';
+    //var message = '{"location": "'+myLocation+'"}';
+    //var message = '{"position": "'+myPosition+'"}';
+    print ("ozan message = " + message);
     reproWindow.eventBridge.emitScriptEvent(message);
-    //do stuff here
 },3000)
 
