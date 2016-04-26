@@ -1,0 +1,9 @@
+//Display VERTEX COLORS
+//SELECT THE GEO
+//RUN THE SCRIPT
+ 
+string $geos[] = `ls -sl`;
+for ( $geo in $geos) {
+     
+    setAttr ($geo+".displayColors") 1;
+}

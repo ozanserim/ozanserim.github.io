@@ -1,0 +1,28 @@
+//SELECT SOURCE AND TARGET JOINTS
+//RUN SCRIPT
+ 
+//GET JOINTS
+string $selected_joints[] = `ls -sl`;
+string $source_joint = $selected_joints[0];
+string $target_joint = $selected_joints[1];;
+ 
+ 
+//GET JOINT TRANSLATES
+float $source_translate_x = `getAttr ($source_joint+".translateX")`;
+float $source_translate_y = `getAttr ($source_joint+".translateY")`;
+float $source_translate_z = `getAttr ($source_joint+".translateZ")`;
+ 
+//GET JOINT ROTATIONS
+float $source_rotate_x = `getAttr ($source_joint+".rotateX")`;
+float $source_rotate_y = `getAttr ($source_joint+".rotateY")`;
+float $source_rotate_z = `getAttr ($source_joint+".rotateZ")`;
+ 
+//SET TARGET TRANSLATES
+setAttr ($target_joint+".translateX") ($source_translate_x*(-1));
+setAttr ($target_joint+".translateY") ($source_translate_y);
+setAttr ($target_joint+".translateZ") ($source_translate_z);
+ 
+//SET TARGET ROTATES
+setAttr ($target_joint+".rotateX") ($source_rotate_x);
+setAttr ($target_joint+".rotateY") ($source_rotate_y*(-1));
+setAttr ($target_joint+".rotateZ") ($source_rotate_z*(-1));

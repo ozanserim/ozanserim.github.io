@@ -1,0 +1,13 @@
+//SELECTS BLENDSHAPE NODES
+//ACTIVATES THEM ON BASE SHAPE
+//DUPLICATES BASESHAPE
+//REPEATS
+
+string $shapes[] = `listAttr -m ("Facial_Blends" + ".w")`;
+ 
+for ( $shape in $shapes) {
+    print ($shape + "\n");
+    setAttr ("Facial_Blends." + $shape) 1;
+    duplicate -n $shape "Body";
+    setAttr ("Facial_Blends." + $shape) 0;
+}
