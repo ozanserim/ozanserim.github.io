@@ -1,0 +1,30 @@
+//WORKFLOW:
+// - SCULPT THE FIX GEO
+// - SELECT TARGET GEOS
+// - ACTIVATE THE PAINT DEFORMERS TOOL
+// - RUN THE SCRIPT
+    
+//get selected targets
+string $geos[] = `ls -selection`;
+   
+//create blendshapes for fix
+for ( $geo in $geos) {
+    blendShape Body $geo;
+}
+    
+for ( $geo in $geos) {
+    select $geo;
+    string $shapes[] = `listRelatives -children -shapes $geo`;// get the shape node as it's the one with the blend shape attached
+    string $shape = ($shapes[0]); // assuming there's only one shape node
+    string $blends[] =` listConnections -type "blendShape" $shape`;// get the 1st blend shape deformer attached to the mesh
+    print ("Blends: " + $blends[0] + "\n");
+    string $targets[] = `listAttr -m ($blends[0] + ".w")`;
+         
+    for ($target in $targets) {
+        print ($target + "\n");
+        setAttr ($blends[0] + "." + $target) 1;
+        artImportAttrMapCB artAttrCtx "/Users/ozan/Documents/assets/avatars/_fuse_mesh_blendmaps/body_notface.iff" "image";
+    }
+}
+//deselect to show it's finished
+select -cl;
