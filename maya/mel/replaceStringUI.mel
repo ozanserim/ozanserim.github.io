@@ -1,0 +1,54 @@
+//replace indicated string
+//doesn't handle special characters gracefully. e.g. ":"
+
+global string $textFieldWin;
+global string $findTextfield;
+global string $replaceTextfield;
+
+global proc replaceString() { 
+    global string $findTextfield; 
+    global string $replaceTextfield; 
+    string $findString = `textFieldGrp -q -text $findTextfield`;
+    string $replaceString = `textFieldGrp -q -text $replaceTextfield`;
+    
+	print("findstring " + $findString + "\n");
+	print("replacestring " + $replaceString + "\n");
+
+    string $nodes[] = `ls -sl -dag`;
+    for($node in $nodes){
+        string $newNam = substituteAllString($node, $findString, $replaceString);
+        print ($newNam+ "\n");
+        rename -ignoreShape $node ($newNam);
+        print ($node + "\n");
+    
+    }
+	
+}
+
+  
+//--------------------------------------------------
+// Adds a slider and a button to the window
+//--------------------------------------------------
+global proc addUIWidgets()
+{
+global string $findTextfield;
+global string $replaceTextfield;
+  
+columnLayout;
+$findTextfield = `textFieldGrp -columnWidth 1 50 -columnWidth 2 150 -text "find" -label "Find"`;
+$replaceTextfield = `textFieldGrp -columnWidth 1 50 -columnWidth 2 150 -text "replace" -label "Replace"`;
+button -label "click me" -command "replaceString";
+}
+  
+//--------------------------------------------------
+// Main proc
+//--------------------------------------------------
+global proc replaceStringUI()
+{
+    global string $textFieldWin; 
+    $textFieldWin = `window -w 400 -h 200 -topLeftCorner 500 1000 -title "UI Test"`;
+    addUIWidgets();
+    showWindow $textFieldWin;
+}
+  
+replaceStringUI();

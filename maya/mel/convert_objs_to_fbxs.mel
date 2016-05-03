@@ -1,0 +1,27 @@
+string $scan_root = "/Users/ozan/Documents/faceshift/profiles";
+string $scan_dirs[]; 
+string $obj_path;
+string $dir_path;
+string $fbx_path;
+
+$scan_dirs = `getFileList -folder $scan_root`;
+
+for($dir in $scan_dirs){
+    if ($dir != ".DS_Store"){
+        print ($dir + "\n");
+        $dir_path = $scan_root +"/"+ $dir;
+        $obj_path = $dir_path +"/Neutral.obj";
+        print ($obj_path + "\n");
+        $fbx_path = $dir_path +"/Neutral.fbx";
+        print ($fbx_path + "\n");        
+        
+        file -f -options "mo=1"  -ignoreVersion  -typ "OBJ" -o $obj_path;
+        addRecentFile($obj_path, "OBJ");
+        select -r -sym Mesh ;
+        setAttr "Mesh.scaleZ" .1;
+        setAttr "Mesh.scaleX" .1;
+        setAttr "Mesh.scaleY" .1;
+        makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;
+        file -force -options "mo=1" -type "FBX export" -pr -ea $fbx_path;
+    }
+}

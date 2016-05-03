@@ -1,7 +1,7 @@
 //REPLACE TEXTURE PATH
 //REPLACES OLD PATH WITH NEW PATH FOR ALL TEXTURES
-string $old_path = "/Users/ozan/Dropbox (bvx)/5105_HighFidelity_SHARED/Latest/Priscilla/maya/sourceimages/";
-string $new_path = "sourceimages/";
+string $old_path = "$ART_LOCAL_ROOT\\_art\\production\\c\\c3cfcce3-e525-408c-8675-a987cddeaa28\\assets\\Characters\\tom\\__working__\\textures\\";
+string $new_path = "/Users/ozan/Documents/assets/avatars/artella/_art/production/c/c3cfcce3-e525-408c-8675-a987cddeaa28/assets/Characters/tom/__working__/textures/";
 string $SceneTextures[] = `ls -tex`; 
 
 for ($i = 0; $i< (`size $SceneTextures`); $i++){

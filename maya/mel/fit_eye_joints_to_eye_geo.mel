@@ -1,0 +1,42 @@
+//FIT EYE JOINTS TO EYE GEO
+//-------------------------
+
+//POSITION LEFT EYE
+select -r eyeball_left;
+xform -cp;
+float $eye_position[] = `xform -q -scalePivot`;
+select -r LeftEye ;
+move -a $eye_position[0] $eye_position[1] $eye_position[2] ;
+
+
+//BIND LEFT EYE
+//skinCluster -dr 4.5 LeftEye eyeball_left;
+//string $objHist[] = `listHistory -pdo 1 "eyeball_left"`;
+//string $skinClusters[] = `ls -type "skinCluster" $objHist`;
+
+//select -r eyeball_left;
+//select -tgl LeftEye;
+
+//skinClusterInfluence 1 "-ug -dr 4 -ps 0 -ns 10";
+//select -r eyeball_left.vtx[0:381] ;
+//skinPercent -tv LeftEye 1 $skinClusters[0] eyeball_left.vtx[0:381];
+
+
+//POSITION RIGHT EYE
+select -r eyeball_right;
+xform -cp;
+float $eye_position[] = `xform -q -scalePivot`;
+select -r RightEye ;
+move -a $eye_position[0] $eye_position[1] $eye_position[2] ;
+
+//BIND RIGHT EYE
+//skinCluster -dr 4.5 RightEye eyeball_right;
+//string $objHist[] = `listHistory -pdo 1 "eyeball_right"`;
+//string $skinClusters[] = `ls -type "skinCluster" $objHist`;
+
+//select -r eyeball_right;
+//select -tgl RightEye ;
+
+//skinClusterInfluence 1 "-ug -dr 4 -ps 0 -ns 10";
+//select -r eyeball_right.vtx[0:381] ;
+//skinPercent -tv RightEye 1 $skinClusters[0] eyeball_right.vtx[0:381];

@@ -1,0 +1,29 @@
+listAttachedAnimCurves("mouth_ctrl");
+// this function takes the name of a node and prints
+// the names of all animated attributes
+proc listAttachedAnimCurves(string $node) {
+             
+    // get the connections and connected nodes
+    $src_a = `listConnections -s false -d true -c true $node`;
+    $src_n = `listConnections -s false -d true $node`;
+     
+    print($node+"\n");
+    for($i=0;$i<size($src_n);$i++) {
+        $j = $i*2;
+
+        // query the node type of the connected node
+        $type = `nodeType $src_n[$i]`;
+        print($node+"("+$type+")\n");
+
+         
+        // see if it's a
+        //   time to angular curve
+        //   time to length curve  or a
+        //   time to unitless curve
+        if($type=="animCurveTA" ||
+           $type=="animCurveTL" ||
+           $type=="animCurveTU") {
+           print("\t"+$src_a[$j+1]+"\n");
+        }
+    }
+}
