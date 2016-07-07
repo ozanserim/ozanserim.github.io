@@ -1,0 +1,24 @@
+string $source_dir = "/Users/ozan/Documents/assets/avatars/mask/for_home";
+string $fbx_files[]; 
+string $fbx_path;
+string $shape_name;
+int $pos = 0;
+int $dist = 100;
+
+$fbx_files = `getFileList -folder $source_dir -filespec "*.fbx"`;
+
+for($fbx_file in $fbx_files){
+    //GET FBX FILE
+    print ("fbx file: " + $fbx_file + "\n");    
+    $fbx_path = $source_dir + "/" + $fbx_file;
+    print ("fbx path: " + $fbx_path + "\n");    
+    file -i $fbx_path;
+
+
+    //PROCESS SCENE
+    $shape_name = `substitute "\.fbx$" $fbx_file ""`;
+    //string $temp = "Hifi_Mask_Moustache";
+    setAttr ($shape_name + ".translateX") $pos;
+    $pos = $pos + $dist;
+    
+}    

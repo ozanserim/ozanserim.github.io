@@ -1,0 +1,20 @@
+//RENAME SHAPE NODE
+
+
+string $geos[] = `ls -selection`;
+for ( $geo in $geos) {
+    print ("geo: " + $geo + "\n");
+    select $geo;
+    string $shapes[] = `listRelatives -children -shapes $geo`;// get the shape node as it's the one with the blend shape attached
+    print ("shapes[0]: " + $shapes[0] + "\n");
+    string $shape = ($shapes[0]); // assuming there's only one shape node
+    $shape_path = ("|" + $shape + "|" + $shape);
+    print ("shapes path: " + $shape_path + "\n");
+    $shape_name = ($shape + "Shape");
+    print ("shape name: " + $shape_name + "\n");
+    rename $shape_path $shape_name;
+    //rename |UpperLipUp_Right|UpperLipUp_Right "UpperLipUp_RightShape" ;
+
+    
+    
+}

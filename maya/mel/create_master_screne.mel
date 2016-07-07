@@ -1,0 +1,62 @@
+string $source_dir = "/Users/ozan/Documents/assets/avatars/hackathon/avatar_geos";
+$avs = `getFileList -folder $source_dir`;
+
+//IMPORT GEO AND POSE
+for($av in $avs){
+    int $bol = `gmatch $av "*.fbm"`;
+    if ($bol ==  0){
+        $import_file = ($source_dir+"/"+$av); 
+        file -import -type "FBX"  -ignoreVersion -ra true -mergeNamespacesOnClash false -namespace "antonio" -options "fbx"  -pr $import_file;
+ 
+    }
+}
+
+string $source_dir = "/Users/ozan/Documents/assets/avatars/hackathon/source";
+$avs = `getFileList -folder $source_dir`;
+
+
+//IMPORT FBX, POSE, DELETE HIST, EXPORT
+int $av_pos = 0;
+for($av in $avs){
+    int $bol = `gmatch $av "*.fbm"`;
+    if ($bol ==  0){
+        $import_file = ("/Users/ozan/Documents/assets/avatars/hackathon/source/"+$av);
+        $export_file = ("/Users/ozan/Documents/assets/avatars/hackathon/avatar_geos/"+$av);
+
+        print ($import_file  + "\n");
+        file -import -type "FBX"  -ignoreVersion -ra true -mergeNamespacesOnClash false -namespace "antonio" -options "fbx"  -pr $import_file;
+        setAttr "Hips.translateX" $av_pos;
+        $av_pos = $av_pos + 100; 
+        //shoulder
+        select -r -sym LeftShoulder ;
+        rotate -r -ws -fo 0 0 -4;
+        select -cl -sym  ;
+        select -r -sym RightShoulder ;
+        rotate -r -ws -fo 0 0 4 ;
+
+        //arm
+        select -r -sym LeftArm ;
+        rotate -r -ws -fo 0 0 -70 ;
+        select -r -sym RightArm ;
+        rotate -r -ws -fo 0 0 70 ;
+
+        select -r Hips ;
+        DeleteAllHistory;
+
+        select -r Hips ;
+        delete;
+
+        SelectAllGeometry;   
+        $allObjects = `ls -sl`;
+        for ( $obj in $allObjects ) {
+                print ($obj + "\n");
+                rename $obj ($av);
+        }
+        SelectAllGeometry; 
+        doGroup 0 1 1;
+        rename "group1" ($av + "_grp");
+
+        file -force -options "fbx" -type "FBX export" -pr -ea $export_file;
+        file -f -new;
+    }    
+}

@@ -1,0 +1,37 @@
+string $source_dir = "/Users/ozan/Documents/assets/avatars/mask/ForMarketplace/fbxFiles";
+string $target_dir = "/Users/ozan/Documents/assets/avatars/mask/for_home";
+string $fbx_files[]; 
+string $fbx_path;
+string $shape_name;
+
+$fbx_files = `getFileList -folder $source_dir -filespec "*.fbx"`;
+
+for($fbx_file in $fbx_files){
+    //GET FBX FILE
+    print ("fbx file: " + $fbx_file + "\n");    
+    $fbx_path = $source_dir + "/" + $fbx_file;
+    print ("fbx path: " + $fbx_path + "\n");    
+    file -f  -o $fbx_path;
+
+    //PROCESS SCENE
+    delete -all -ch;
+    select -r pointLight1 pointLight2 |Blink1 |M3 |O3 |Ah1 |E1 ;
+    delete;
+    select -r Neutral1; 
+    parent -w;
+    select -r jointNeck2 ;
+    doDelete;
+    $shape_name = `substitute "\.fbx$" $fbx_file ""`;
+    rename "Neutral1" $shape_name;
+    print ("shape_name: " + $shape_name + "\n");
+    setAttr ($shape_name + ".scaleX") .3;
+    setAttr ($shape_name + ".scaleY") .3;
+    setAttr ($shape_name + ".scaleZ") .3;
+    select -r $shape_name; 
+    makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;
+    
+    //EXPORT FBX
+    $fbx_path = $target_dir + "/" + $fbx_file;
+    print ("new fbx file: " + $fbx_file + "\n");    
+    file -force -options "mo=1" -type "FBX export" -pr -ea $fbx_path;    
+}    

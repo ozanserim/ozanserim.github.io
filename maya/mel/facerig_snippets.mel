@@ -7,20 +7,36 @@
 
 nodeType mouth_ctrl;
 // Result: transform //
+
 listAttr -k mouth_ctrl;
-// Result: jaw_open...
+// Result: jaw_open jaw_left_right jaw_in_out...
 
 nodeType mouth_ctrl.jaw_open;
 // Result: transform //
+
+select mouth_ctrl_jaw_open;
+// Activates the CB and the timeline keys
+// Selects mouth_ctrl_jaw_open anim curves
+
 listConnections -d off -s on mouth_ctrl.jaw_open;
 // Result: mouth_ctrl_jaw_open //
+
+select mouth_ctrl.jaw_open;
+
 nodeType mouth_ctrl_jaw_open;
 // Result: animCurveTU //
 
 listConnections -d on -s off mouth_ctrl.jaw_open;
 // Result: ...jaw_fLoc_grp_translateY...
+
 nodeType jaw_fLoc_grp_translateY;
 // Result: animCurveUL
+
+select jaw_fLoc_grp_translateY;
+select -r jaw_fLoc_grp_translateY ;
+
+select jaw_fLoc_grp;
+
 
 nodeType jaw_fLoc_grp;
 // Result: transform //
@@ -29,6 +45,7 @@ listAttr -k jaw_fLoc_grp;
 // Result: translateX translateY translateZ rotateX rotateY rotateZ scaleX scaleY scaleZ //
 
 nodeType jaw_fLoc_grp.translateY
+
 listConnections -d off -s on jaw_fLoc_grp;
 // Result: blendWeighted793 blendWeighted794 blendWeighted795 unitConversion3758 unitConversion3761 unitConversion3764 //
 
@@ -45,6 +62,8 @@ listConnections -d on -s off jaw_fLoc_grp_translateY;
 
 listConnections blendWeighted794
 // Result: jaw_fLoc_grp jaw_fLoc_grp_translateY animCurveUL2960 animCurveUL3071 animCurveUL3380 //
+
+select -r blendWeighted794 ;
 
 listConnections animCurveUL2960
 // Result: blendWeighted794 mouth_ctrl //

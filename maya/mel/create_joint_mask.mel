@@ -1,0 +1,84 @@
+string $leaf_joints[];
+int $i = 0;
+select -r -hi spine_05 ;
+string $joints[] = `ls -sl`;
+for ($joint in $joints){ 
+    select $joint;
+    print ($joint + "\n");
+    string $has_child[] = `listRelatives -c`;
+    if ($has_child[0]==""){
+        //select $joint;
+        $leaf_joints[$i] = $joint;
+        print ($joint + "\n");
+        $i=$i+1;
+    }
+}
+print ("\n\n");
+
+for ($leaf_joint in $leaf_joints){
+    print ("leaf: " + $leaf_joint + "\n");
+    select -r $leaf_joint ;
+    string $curr_joint[] = `ls -sl`;
+    float $my_pos[] = `xform -worldSpace -query -translation $curr_joint`;
+    print ("pos: " + $my_pos[0] + " " + $my_pos[1] + " " +  $my_pos[2] + "\n");
+    //polyPlane -n myPlane -sx 3 -sy 3 -w 1 -h 1;
+    polySphere -r .2 -sx 4 -sy 4 -ax 0 1 0 -cuv 2 -ch 1;
+    move $my_pos[0] $my_pos[1] $my_pos[2];
+    rename ($leaf_joint + "_ctrl";
+    //rotate 90deg 0 0 ;
+} 
+
+
+//==========================
+//Alt: Select target joints to avoid leaf joints issue
+
+string $joints[] = `ls -sl`;
+
+for ($leaf_joint in $joints){
+    print ("leaf: " + $leaf_joint + "\n");
+    select -r $leaf_joint ;
+    string $curr_joint[] = `ls -sl`;
+    float $my_pos[] = `xform -worldSpace -query -translation $curr_joint`;
+    print ("pos: " + $my_pos[0] + " " + $my_pos[1] + " " +  $my_pos[2] + "\n");
+    //polyPlane -n myPlane -sx 3 -sy 3 -w 1 -h 1;
+    polySphere -r .2 -sx 4 -sy 4 -ax 0 1 0 -cuv 2 -ch 1;
+    move $my_pos[0] $my_pos[1] $my_pos[2];
+    rename ($leaf_joint + "_ctrl";
+    //rotate 90deg 0 0 ;
+} 
+
+//================================
+//SET THE PREFIX TO UPPERCASE
+string $ctrls[] = `ls -sl`;
+
+for ($ctrl in $ctrls){
+    string $source = $ctrl;
+    string $prefix = `substring $source 1 2`;
+    print ($prefix + "\n");
+    if (($prefix == "l_") || ($prefix == "r_")){
+        $prefix = `toupper $prefix`;
+        print ("upper: " + $prefix + "\n");
+        string $suffix = `substring $source 3 (size($source))`;
+        print ("suffix: " + $suffix + "\n");
+        string $target = ($prefix + $suffix);
+        print ("target: " + $target + "\n");
+        rename $source $target;
+    }
+}
+
+
+//================================
+//PARENT THE CONTROLS
+
+string $ctrls[] = `ls -sl`;
+
+for ($ctrl in $ctrls){
+    string $source = $ctrl; 
+    string $substring = `substring $source 1 (size($source)-5)`;
+    string $target = ($substring + "_fLoc_reposition_grp"); 
+    select -r $source;
+    select -add $target ;
+    doCreateParentConstraintArgList 1 { "1","0","0","0","0","0","0","1","","1" };
+    parentConstraint -mo -weight 1;
+}
+
