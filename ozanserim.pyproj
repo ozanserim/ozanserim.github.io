@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97cbe9b5-824c-4b30-a7a2-cead33cf624a}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="domainlayout\domainlayout.js" />
+    <Content Include="domainlayout\huff_scene.js" />
+    <Content Include="domainlayout\scene.js" />
+    <Content Include="domainlayout\setCreator.js" />
+    <Content Include="domainlayout\setDestroyer.js" />
+    <Content Include="examples\dice.js" />
+    <Content Include="examples\toolBars.js" />
+    <Content Include="images\bernie.jpg" />
+    <Content Include="images\firefox-icon.png" />
+    <Content Include="images\mikey.jpg" />
+    <Content Include="images\ozan.png" />
+    <Content Include="index.html" />
+    <Content Include="json_ui.js" />
+    <Content Include="main.js" />
+    <Content Include="maya\python\mask_dictionary\mask_data.txt" />
+    <Content Include="maya\python\mask_dictionary\_archive\mask_data copy 2.txt" />
+    <Content Include="maya\python\mask_dictionary\_archive\mask_data copy.txt" />
+    <Content Include="maya\python\PythonToolsLinks1\PythonToolsLinks1\PythonTools.html" />
+    <Content Include="maya\python\PythonToolsLinks1\PythonToolsLinks1\vslogo.png" />
+    <Content Include="repro\eventBridgeLoader.js" />
+    <Content Include="repro\examples\edit.js" />
+    <Content Include="repro\examples\editOzan.js" />
+    <Content Include="repro\examples\entityFloor.js" />
+    <Content Include="repro\examples\entityProperties.html" />
+    <Content Include="repro\examples\entityPropertiesOzan.html" />
+    <Content Include="repro\examples\eventBridgeLoader.js" />
+    <Content Include="repro\examples\libraries\avatarRelativeOverlays.js" />
+    <Content Include="repro\examples\libraries\constants.js" />
+    <Content Include="repro\examples\libraries\dataViewHelpers.js" />
+    <Content Include="repro\examples\libraries\easyStar.js" />
+    <Content Include="repro\examples\libraries\easyStarExample.js" />
+    <Content Include="repro\examples\libraries\entityCameraTool.js" />
+    <Content Include="repro\examples\libraries\entityList.js" />
+    <Content Include="repro\examples\libraries\entityPropertyDialogBox.js" />
+    <Content Include="repro\examples\libraries\entitySelectionTool.js" />
+    <Content Include="repro\examples\libraries\fjs.js" />
+    <Content Include="repro\examples\libraries\fjsExample.js" />
+    <Content Include="repro\examples\libraries\globals.js" />
+    <Content Include="repro\examples\libraries\gridTool.js" />
+    <Content Include="repro\examples\libraries\highlighter.js" />
+    <Content Include="repro\examples\libraries\htmlColors.js" />
+    <Content Include="repro\examples\libraries\httpMultiPart.js" />
+    <Content Include="repro\examples\libraries\lightOverlayManager.js" />
+    <Content Include="repro\examples\libraries\line.js" />
+    <Content Include="repro\examples\libraries\omniTool.js" />
+    <Content Include="repro\examples\libraries\omniTool\models\invisibleWand.js" />
+    <Content Include="repro\examples\libraries\omniTool\models\modelBase.js" />
+    <Content Include="repro\examples\libraries\omniTool\models\wand.js" />
+    <Content Include="repro\examples\libraries\omniTool\modules\breakdanceOmniToolModule.js" />
+    <Content Include="repro\examples\libraries\omniTool\modules\test.js" />
+    <Content Include="repro\examples\libraries\overlayManager.js" />
+    <Content Include="repro\examples\libraries\overlayUtils.js" />
+    <Content Include="repro\examples\libraries\progressDialog.js" />
+    <Content Include="repro\examples\libraries\promise.js" />
+    <Content Include="repro\examples\libraries\promiseExample.js" />
+    <Content Include="repro\examples\libraries\soundArray.js" />
+    <Content Include="repro\examples\libraries\stringHelpers.js" />
+    <Content Include="repro\examples\libraries\tinyColor.js" />
+    <Content Include="repro\examples\libraries\toolBars.js" />
+    <Content Include="repro\examples\libraries\ToolTip.js" />
+    <Content Include="repro\examples\libraries\tween.js" />
+    <Content Include="repro\examples\libraries\uiwidgets.js" />
+    <Content Include="repro\examples\libraries\unitTest.js" />
+    <Content Include="repro\examples\libraries\usertiming.js" />
+    <Content Include="repro\examples\libraries\usertimingExample.js" />
+    <Content Include="repro\examples\libraries\utils.js" />
+    <Content Include="repro\examples\libraries\virtualKeyboard.js" />
+    <Content Include="repro\examples\libraries\walkApi.js" />
+    <Content Include="repro\examples\libraries\walkConstants.js" />
+    <Content Include="repro\examples\libraries\walkFilters.js" />
+    <Content Include="repro\examples\libraries\walkSettings.js" />
+    <Content Include="repro\findEntities.js" />
+    <Content Include="repro\images\huffmeme.jpg" />
+    <Content Include="repro\jsoneditor.js" />
+    <Content Include="repro\repro.css" />
+    <Content Include="repro\repro.html" />
+    <Content Include="repro\repro.js" />
+    <Content Include="repro\specs.txt" />
+    <Content Include="repro\test.html" />
+    <Content Include="shotmanager\addChaseShot.js" />
+    <Content Include="shotmanager\addDinnerShot.js" />
+    <Content Include="shotmanager\addFightShot.js" />
+    <Content Include="shotmanager\addKissShot.js" />
+    <Content Include="shotmanager\makeAirship.js" />
+    <Content Include="shotmanager\specs.txt" />
+    <Content Include="shotmanager\startstopAnimation.js" />
+    <Content Include="shotmanager\startstopAnimation2.js" />
+    <Content Include="shotmanager\Test.html" />
+    <Content Include="shotmanager\test.js" />
+    <Content Include="styles\style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="maya\python\an_introduction_to_pyside_for_maya\a_more_practical_pyside_example\primitives_ui.py" />
+    <Compile Include="maya\python\an_introduction_to_pyside_for_maya\signals_and_slots_in_pyside\test_ui.py" />
+    <Compile Include="maya\python\an_introduction_to_pyside_for_maya\signals_and_slots_in_pyside\test_ui_start.py" />
+    <Compile Include="maya\python\basic_python_window_ui.py" />
+    <Compile Include="maya\python\dictionary_tutorial_script.py" />
+    <Compile Include="maya\python\drivenKeyVisualizer\drivenKeyVisualizer.py" />
+    <Compile Include="maya\python\drivenKeyVisualizer\test\drivenKeyVisualizer_forOzanMac.py" />
+    <Compile Include="maya\python\facerig.py" />
+    <Compile Include="maya\python\judd\faceRigUtils.py" />
+    <Compile Include="maya\python\judd\_from_judd\faceRigUtils.py" />
+    <Compile Include="maya\python\make_dir_in_home.py" />
+    <Compile Include="maya\python\map_repo_groups_to_mask.py" />
+    <Compile Include="maya\python\python_intro.py" />
+    <Compile Include="maya\python\sdkUpdater.py" />
+    <Compile Include="maya\python\set_environment.py" />
+    <Compile Include="maya\python\_archive\map_repo_groups_to_mask.py" />
+    <Compile Include="maya\python\_archive\sdkUpdater copy.py" />
+    <Compile Include="maya\python\_archive\sdkUpdater.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="domainlayout" />
+    <Folder Include="examples" />
+    <Folder Include="images" />
+    <Folder Include="maya\" />
+    <Folder Include="maya\python" />
+    <Folder Include="maya\python\an_introduction_to_pyside_for_maya\" />
+    <Folder Include="maya\python\an_introduction_to_pyside_for_maya\a_more_practical_pyside_example" />
+    <Folder Include="maya\python\an_introduction_to_pyside_for_maya\signals_and_slots_in_pyside" />
+    <Folder Include="maya\python\drivenKeyVisualizer" />
+    <Folder Include="maya\python\drivenKeyVisualizer\test" />
+    <Folder Include="maya\python\judd" />
+    <Folder Include="maya\python\judd\_from_judd" />
+    <Folder Include="maya\python\mask_dictionary" />
+    <Folder Include="maya\python\mask_dictionary\_archive" />
+    <Folder Include="maya\python\PythonToolsLinks1\" />
+    <Folder Include="maya\python\PythonToolsLinks1\PythonToolsLinks1" />
+    <Folder Include="maya\python\_archive" />
+    <Folder Include="repro" />
+    <Folder Include="repro\examples" />
+    <Folder Include="repro\examples\libraries" />
+    <Folder Include="repro\examples\libraries\omniTool\" />
+    <Folder Include="repro\examples\libraries\omniTool\models" />
+    <Folder Include="repro\examples\libraries\omniTool\modules" />
+    <Folder Include="repro\images" />
+    <Folder Include="shotmanager" />
+    <Folder Include="styles" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>

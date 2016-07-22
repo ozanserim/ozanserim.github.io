@@ -1,6 +1,7 @@
-#Once you've put the file in your scripts folder, this is the command in Maya to make it work:
+﻿#Once you've put the file in your scripts folder, this is the command in Maya to make it work:
 #import faceRigUtils
 #faceRigUtils.updatePose("mouth_ctrl", "jaw_open")
+#Git Test
 
 import maya.cmds as cmds
 
