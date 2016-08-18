@@ -22,9 +22,9 @@ for ( $geo in $geos) {
     string $targets[] = `listAttr -m ($blends[0] + ".w")`;
          
     for ($target in $targets) {
-        //print ($target + "\n");
+        //print ($wtarget + "\n");
         setAttr ($blends[0] + "." + $target) 1;
-        artImportAttrMapCB artAttrCtx "/Users/ozan/Documents/assets/avatars/uploadvr/Will_Mason/sourceimages/blendweights/eye_fix.iff" "image";
+        artImportAttrMapCB artAttrCtx "D:/\assets/\avatars/\_blendmaps/\hand_fix.iff" "image";
     }
 }
 //deselect to show it's finished

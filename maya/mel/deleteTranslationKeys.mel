@@ -1,0 +1,29 @@
+//LOOP THROUGH SELECTED JOINTS AND DELETE THE ANY TRANSLATION KEYS
+string $jnts[];
+string $ajnt;
+$jnts = `ls -sl`;
+print $jnts;
+print "\n";
+for ($ajnt in $jnts){
+    print $ajnt;
+    print "\n";
+    if ( catch( `keyframe -query -keyframeCount ($ajnt + "_translateX")` ) ) {
+         print "No object matches name\n";
+    } else {
+        selectKey -add -k -t 0 -t 1 ($ajnt + "_translateX") ;
+        print "Select Key TX \n";
+    }
+    if ( catch( `keyframe -query -keyframeCount ($ajnt + "_translateY")` ) ) {
+         print "No object matches name";
+    } else {
+        selectKey -add -k -t 0 -t 1 ($ajnt + "_translateY") ;
+        print "Select Key TY \n";
+    }
+    if ( catch( `keyframe -query -keyframeCount ($ajnt + "_translateZ")` ) ) {
+         print "No object matches name";
+    } else {
+        selectKey -add -k -t 0 -t 1 ($ajnt + "_translateZ") ;
+        print "Select Key TZ \n";
+    }
+    cutKey -animation keys -clear;
+}

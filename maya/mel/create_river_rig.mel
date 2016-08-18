@@ -1,0 +1,81 @@
+//CREATE RIVER RIG
+//CREATES A JOINT CHAIN FOR THE RIVER GEO.
+
+string $jnt_name;
+string $root_jnt;
+string $end_jnt;
+string $ik_hndl;
+string $ik_crv;
+string $geo_name = "jamplate_";
+string $sup_root = "super_root";
+
+int $pos;
+int $num_sect = 31;
+int $sect_lgth = 4;
+int $sect_wdth = 5;
+int $start_time = 1;
+int $end_time = 2000;
+int $time_offset = 70;
+int $num_span = 30;
+
+//Prep scene
+currentTime 0 ;
+setAttr "jamplate_.visibility" 1;
+joint -p 0 0 0 ;
+rename $sup_root;
+
+for( $root_i=0; $root_i<$num_sect; ++$root_i )
+{    
+    //clear selection and reset position
+    select -cl  ;
+    $pos = 0;
+
+    //Increment IK elements
+    $ik_hndl = "ikHandle" + ($root_i + 1);
+    $ik_crv = "curve" + ($root_i + 1); 
+
+	//Select supper root as parent.
+	select -r $sup_root;
+	
+    //create joints and set position
+    for( $chld_i=0; $chld_i<$sect_lgth; ++$chld_i )
+    {    
+        $jnt_name = ("joint_" + $root_i + "_" + $chld_i);
+        joint -p $pos 0 0 ;
+        rename $jnt_name;
+        $pos = $pos + 1;
+    }
+    //Create IK and set twist attr
+    $root_jnt = ("joint_" + $root_i + "_" + ($chld_i-$chld_i));
+    $end_jnt = ("joint_" + $root_i + "_" + ($chld_i-1));        
+    select -r $root_jnt;
+    select -add $end_jnt;
+    ikHandle -sol ikSplineSolver -ns $num_span;
+    setAttr ($ik_hndl + ".dTwistControlEnable") 1;
+ 
+	//Create river section
+    //polyCube -w $sect_lgth -h 1 -d $sect_wdth -sx $sect_lgth -sy 1 -sz $sect_wdth -ax 0 1 0 -cuv $sect_lgth -ch 1;
+    select -r jamplate_ ;
+	duplicate -rr;
+    move -rpr -x ($sect_lgth/2) ;
+    makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;
+    //bindSkin ($geo_name+ ($root_i+1)) $root_jnt;
+    skinCluster -dr 4.5 $root_jnt ($geo_name+ ($root_i+1));
+
+	  
+    //Select curve and create motion path
+    select -r $ik_crv ;
+    xform -cp;
+    select -add mo_path ;
+    pathAnimation -fractionMode true -follow true -followAxis x -upAxis y -worldUpType "vector" -worldUpVector 0 1 0 -inverseUp false -inverseFront false -bank false -startTimeU $start_time -endTimeU $end_time;
+	flow -divisions $num_span 2 2 -objectCentered 1 -localCompute 0 -localDivisions 2 2 2 $ik_crv;
+	$start_time = $start_time + $time_offset;
+	$end_time = $end_time + $time_offset;
+}
+setAttr "jamplate_.visibility" 0;
+
+
+
+
+
+
