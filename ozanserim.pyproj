@@ -21,7 +21,7 @@
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="domainlayout\domainlayout.js" />
+    <Content Include="javascripts\createWebEntities.js" />
     <Content Include="domainlayout\huff_scene.js" />
     <Content Include="domainlayout\scene.js" />
     <Content Include="domainlayout\setCreator.js" />
@@ -33,6 +33,10 @@
     <Content Include="images\mikey.jpg" />
     <Content Include="images\ozan.png" />
     <Content Include="index.html" />
+    <Content Include="javascripts\fallingWalls.js" />
+    <Content Include="javascripts\goku-supersaijyan.js" />
+    <Content Include="javascripts\ozans_soundMaker.js" />
+    <Content Include="javascripts\ozans_sound_test.js" />
     <Content Include="json_ui.js" />
     <Content Include="main.js" />
     <Content Include="maya\python\mask_dictionary\mask_data.txt" />
@@ -113,6 +117,7 @@
     <Content Include="styles\style.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="filesystem\moveFilesIntoFolders.py" />
     <Compile Include="maya\python\an_introduction_to_pyside_for_maya\a_more_practical_pyside_example\primitives_ui.py" />
     <Compile Include="maya\python\an_introduction_to_pyside_for_maya\signals_and_slots_in_pyside\test_ui.py" />
     <Compile Include="maya\python\an_introduction_to_pyside_for_maya\signals_and_slots_in_pyside\test_ui_start.py" />
@@ -121,8 +126,10 @@
     <Compile Include="maya\python\drivenKeyVisualizer\drivenKeyVisualizer.py" />
     <Compile Include="maya\python\drivenKeyVisualizer\test\drivenKeyVisualizer_forOzanMac.py" />
     <Compile Include="maya\python\facerig.py" />
-    <Compile Include="maya\python\judd\faceRigUtils.py" />
-    <Compile Include="maya\python\judd\_from_judd\faceRigUtils.py" />
+    <Compile Include="maya\python\faceRigTools\faceRigUtils.py" />
+    <Compile Include="maya\python\faceRigTools\hfFaceToolUI.py" />
+    <Compile Include="maya\python\faceRigTools\_from_judd\faceRigUtils.py" />
+    <Compile Include="maya\python\lib\qt_lib.py" />
     <Compile Include="maya\python\make_dir_in_home.py" />
     <Compile Include="maya\python\map_repo_groups_to_mask.py" />
     <Compile Include="maya\python\python_intro.py" />
@@ -131,11 +138,15 @@
     <Compile Include="maya\python\_archive\map_repo_groups_to_mask.py" />
     <Compile Include="maya\python\_archive\sdkUpdater copy.py" />
     <Compile Include="maya\python\_archive\sdkUpdater.py" />
+    <Compile Include="wrapx\avatarpipeline.py" />
+    <Compile Include="wrapx\SimpleWrappingBust.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="domainlayout" />
     <Folder Include="examples" />
+    <Folder Include="filesystem\" />
     <Folder Include="images" />
+    <Folder Include="javascripts\" />
     <Folder Include="maya\" />
     <Folder Include="maya\python" />
     <Folder Include="maya\python\an_introduction_to_pyside_for_maya\" />
@@ -143,8 +154,9 @@
     <Folder Include="maya\python\an_introduction_to_pyside_for_maya\signals_and_slots_in_pyside" />
     <Folder Include="maya\python\drivenKeyVisualizer" />
     <Folder Include="maya\python\drivenKeyVisualizer\test" />
-    <Folder Include="maya\python\judd" />
-    <Folder Include="maya\python\judd\_from_judd" />
+    <Folder Include="maya\python\faceRigTools\" />
+    <Folder Include="maya\python\faceRigTools\_from_judd\" />
+    <Folder Include="maya\python\lib\" />
     <Folder Include="maya\python\mask_dictionary" />
     <Folder Include="maya\python\mask_dictionary\_archive" />
     <Folder Include="maya\python\PythonToolsLinks1\" />
@@ -159,6 +171,7 @@
     <Folder Include="repro\images" />
     <Folder Include="shotmanager" />
     <Folder Include="styles" />
+    <Folder Include="wrapx\" />
   </ItemGroup>
   <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />

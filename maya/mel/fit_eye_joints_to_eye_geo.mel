@@ -2,7 +2,7 @@
 //-------------------------
 
 //POSITION LEFT EYE
-select -r eyeball_left;
+select -r eyeLeftGeo;
 xform -cp;
 float $eye_position[] = `xform -q -scalePivot`;
 select -r LeftEye ;
@@ -23,7 +23,7 @@ move -a $eye_position[0] $eye_position[1] $eye_position[2] ;
 
 
 //POSITION RIGHT EYE
-select -r eyeball_right;
+select -r eyeRightGeo;
 xform -cp;
 float $eye_position[] = `xform -q -scalePivot`;
 select -r RightEye ;

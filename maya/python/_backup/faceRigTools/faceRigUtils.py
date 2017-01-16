@@ -5,7 +5,6 @@
 import maya.cmds as cmds
 
 
-
 def updatePose(control, attribute):
     """update the pose"""
 

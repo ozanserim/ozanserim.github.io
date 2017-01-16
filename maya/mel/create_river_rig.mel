@@ -35,7 +35,7 @@ for( $root_i=0; $root_i<$num_sect; ++$root_i )
     $ik_crv = "curve" + ($root_i + 1); 
 
 	//Select supper root as parent.
-	select -r $sup_root;
+	//select -r $sup_root;
 	
     //create joints and set position
     for( $chld_i=0; $chld_i<$sect_lgth; ++$chld_i )
@@ -54,14 +54,13 @@ for( $root_i=0; $root_i<$num_sect; ++$root_i )
     setAttr ($ik_hndl + ".dTwistControlEnable") 1;
  
 	//Create river section
-    //polyCube -w $sect_lgth -h 1 -d $sect_wdth -sx $sect_lgth -sy 1 -sz $sect_wdth -ax 0 1 0 -cuv $sect_lgth -ch 1;
     select -r jamplate_ ;
 	duplicate -rr;
     move -rpr -x ($sect_lgth/2) ;
     makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;
-    //bindSkin ($geo_name+ ($root_i+1)) $root_jnt;
     skinCluster -dr 4.5 $root_jnt ($geo_name+ ($root_i+1));
-
+    parent $root_jnt $sup_root;
+	//skinCluster -tsb joint1 joint3 pPlane1;
 	  
     //Select curve and create motion path
     select -r $ik_crv ;

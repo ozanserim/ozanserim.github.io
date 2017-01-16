@@ -115,6 +115,7 @@ var secret_garden = Entities.addEntity({
     dimensions: {x:24.0000, y:6.6250 , z:57.1018}
 });
 */
+/*
 var cliff_vista = Entities.addEntity({
     type: "Model",
     modelURL: "https://hifi-content.s3.amazonaws.com/ozan/dev/backlot/sets/vistas/cliffs.fbx",
@@ -122,7 +123,7 @@ var cliff_vista = Entities.addEntity({
     //shapeType: 'box',
     //dimensions: {x:24.0000, y:6.6250 , z:57.1018}
 });
-
+*/
 
 
 /*

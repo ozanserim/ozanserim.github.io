@@ -2,7 +2,7 @@
 //FITS THE HF SKELETON TO MIXAMO SKELETON.
 
 //IMPORT STANDARD SKELETON
-file -import -type "FBX"  -ignoreVersion -ra true -mergeNamespacesOnClash false -namespace "standard_hifi_skeleton" -options "fbx"  -pr "/Users/ozan/Documents/assets/avatars/_skeleton/stable/standard_hifi_skeleton.fbx";
+file -import -type "FBX"  -ignoreVersion -ra true -mergeNamespacesOnClash false -namespace "standard_hifi_skeleton" -options "fbx"  -pr "D:\\assets\\rigs\\skeleton\\stable\\standard_hifi_skeleton.fbx";
 
 //GET HIFI JOINTS
 string $hipsHF = "Hips";
@@ -11,14 +11,14 @@ string $jointsHF[] = `ls -sl -dag`;
  
  
 //GET MIXAMO JOINTS
-string $hipsMX = "prefix_Hips";
+string $hipsMX = "mixamorig:Hips";
 select -r $hipsMX;
 string $jointsMX[] = `ls -sl -dag`;
  
  
 for($currJoint in $jointsMX){
     float $jointPos[] = `joint -q -p -a $currJoint`; //--> worldspace coord of the joint
-    string $searchStr = substituteAllString($currJoint, "prefix_", "");
+    string $searchStr = substituteAllString($currJoint, "mixamorig:", "");
     int $index = stringArrayFind( $searchStr, 0, $jointsHF );
          
     joint -e -p $jointPos[0] $jointPos[1] $jointPos[2] $jointsHF[$index];

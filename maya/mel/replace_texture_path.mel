@@ -1,21 +1,21 @@
 //REPLACE TEXTURE PATH
 //REPLACES OLD PATH WITH NEW PATH FOR ALL TEXTURES
-string $old_path = "/Users/ozan/Dropbox (bvx)/5105_HighFidelity_SHARED/Latest/Matthew/Maya/sourceimages/";
-string $new_path = "sourceimages/";
+//Be sure to use \\ for Windows file paths
+string $old_path = "/tmp/baking-server/api/convert/";
+string $new_path = "D:\\assets\\sets\\hifi_office_folsom\\sourceimages\\archilogic\\";
 string $SceneTextures[] = `ls -tex`; 
 
 for ($i = 0; $i< (`size $SceneTextures`); $i++){
     $Test = catchQuiet(`getAttr ($SceneTextures[$i] + ".fileTextureName")`); 
     if ($Test == 0){ 
         string $TexturePath = `getAttr ($SceneTextures[$i] + ".fileTextureName")`;
-        //print ("$TexturePath: " + $TexturePath + "\n");
+        print ("$TexturePath: " + $TexturePath + "\n");
         string $NewPath = substituteAllString($TexturePath, $old_path, $new_path);
         setAttr -type "string" ($SceneTextures[$i] + ".fileTextureName") $NewPath;
         catchQuiet (AEfileTextureReloadCmd ($SceneTextures[$i] + ".fileTextureName")); 
-        //print $TexturePath;
+        print $TexturePath;
     }//end if
 }//end for i
 
 
-string $nodeName = `shadingNode -asShader blinn`;
-replaceNode lambert56 $nodeName;
+
