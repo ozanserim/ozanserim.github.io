@@ -1,0 +1,11 @@
+//Change all material to type Lambert
+
+string $replaceType = "lambert";
+string $sNode[] = `ls -mat`;    
+for ($each in $sNode)
+    {
+    string $replaceWith = `createNode $replaceType`;
+    replaceNode $each $replaceWith;
+    delete $each;
+    rename $replaceWith $each;
+    }

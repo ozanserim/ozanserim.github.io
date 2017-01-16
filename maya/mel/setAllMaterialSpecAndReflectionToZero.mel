@@ -1,0 +1,20 @@
+//Set all materials spec and reflection to 0
+
+string $materials[] = `ls -mat`; 
+
+for ($i = 0; $i< (`size $materials`); $i++){
+    $test = catchQuiet(`getAttr ($materials[$i] + ".reflectedColor")`); 
+	print ($materials[$i] + "\n");
+    if ($test == 0){ 
+		setAttr ($materials[$i] + ".reflectedColor") -type double3 0 0 0 ;
+		setAttr ($materials[$i] + ".specularColor") -type double3 0 0 0 ;
+        catchQuiet (AEfileTextureReloadCmd ($materials[$i] + ".fileTextureName")); 
+    }
+    //For setting Lambert properties
+    if ($materials[$i]!="particleCloud1"){
+	    setAttr ($materials[$i] + ".ambientColor") -type double3 0 0 0 ;
+		setAttr ($materials[$i] + ".diffuse") 1;
+		setAttr ($materials[$i] + ".translucenceDepth") 0;
+	}
+}
+

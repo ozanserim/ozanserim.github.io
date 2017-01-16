@@ -1,0 +1,11 @@
+//Create shader with default attributes
+//Set variable name 
+
+string $shade_name = "black_arms_shader";
+shadingNode -asShader -name $shade_name  phong;
+sets -renderable true -noSurfaceShader true -empty -name ($shade_name + "SG");
+connectAttr -f ($shade_name + ".outColor") ($shade_name + "SG.surfaceShader");
+setAttr ($shade_name + ".cosinePower") 2;
+setAttr ($shade_name + ".specularColor") -type double3 0 0 0 ;
+setAttr ($shade_name + ".reflectivity") 0;
+sets -e -forceElement ($shade_name + "SG");

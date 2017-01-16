@@ -1,0 +1,132 @@
+//REPLACE TEXTURE PATH
+//REPLACES OLD PATH WITH NEW PATH FOR ALL TEXTURES
+//string $old_path = "\\tmp\\baking-server\\tmp\\convert\\archilogic\\tex\\";
+//string $new_path = "D:\\assets\\sets\\guerrero\\source\\from_archilogic\\archilogic_2016-08-29_13-17-21_2kRGru\\archilogic_2016-08-29_13-17-21_4NsnJK\\textures\\";
+string $SceneTextures[] = `ls -tex`; 
+string $file_paths[];
+string $file_path;
+string $dir_paths[];
+string $new_dir_path = "sourceimages\\";
+string $new_file_path;
+string $unique_paths[];
+int $path_exists = 0;
+
+//GET FILE PATHS & REPLACE WITH "sourceimages"
+for ($i = 0; $i< (`size $SceneTextures`); $i++){
+	print ($i + "\n");
+	$file_path = `getAttr ($SceneTextures[$i] + ".fileTextureName")`;
+	print ("$file_path " +  $file_path + "\n");
+	string $buffer[] ;
+	int $numTokens = `tokenize $file_path "/" $buffer` ;
+	$new_file_path = $new_dir_path +  "\\" + $buffer[$numTokens-1];
+	print ("$new_file_path " +  $new_file_path + "\n");	
+	setAttr -type "string" ($SceneTextures[$i] + ".fileTextureName") $new_file_path;
+}
+
+
+
+//DEPRECATED
+//=======================
+//JUST REPLACE ALL PATHS
+for ($i = 0; $i< (`size $file_paths`); $i++){
+	//GET PATH
+	string $file_path = $file_paths[$i];
+	string $buffer[] ;
+	int $numTokens = `tokenize $file_path "/" $buffer` ;
+	//print ($numTokens + "\n");
+	$new_file_path = $new_dir_path +  "\\" + $buffer[$numTokens-1];
+	print ($new_file_path + "\n");	
+}
+
+for ($i = 0; $i< (`size $SceneTextures`); $i++){
+ 	setAttr -type "string" ($SceneTextures[$i] + ".fileTextureName") $new_file_path;
+}
+
+//ISOLATE DIR PATHS
+for ($i = 0; $i< (`size $file_paths`); $i++){
+	//GET PATH
+	string $file_path = $file_paths[$i];
+	string $buffer[] ;
+	//REMOVE FILENAME
+	int $numTokens = `tokenize $file_path "/" $buffer` ;
+	print ($numTokens + "\n");
+	stringArrayRemoveAtIndex($numTokens-1, $buffer);
+	string $dir_path = stringArrayToString($buffer, "/") ;	
+	$dir_path = "/"+$dir_path;
+	print ($dir_path + "\n");
+	//UNIQUIFY
+    $path_exists = stringArrayContains($dir_path, $dir_paths);
+	print ($path_exists + "\n");
+	if ($path_exists == 0) {
+		string $buffer[];
+		$buffer[0] = $dir_path;
+		appendStringArray($dir_paths, $buffer, 1);		
+	}
+}
+print ("$dir_paths = ");
+print $dir_paths;
+print "\n";
+
+for ($i = 0; $i< (`size $SceneTextures`); $i++){
+    string $TexturePath = `getAttr ($SceneTextures[$i] + ".fileTextureName")`;
+	//print ($TexturePath + "\n");
+	for ($j = 0; $j< (`size $dir_paths`); $j++){
+		print ("$dir_paths[$j]=" + $dir_paths[$j] + "\n");
+		print ("$new_dir_path=" + $new_dir_path + "\n");
+    	$new_file_path = substituteAllString($TexturePath, $dir_paths[$j], $new_dir_path);
+		//print $new_file_path;
+    }
+	//setAttr -type "string" ($SceneTextures[$i] + ".fileTextureName") $NewPath;
+}
+
+//------
+
+global proc int ySearch(string $searchWord, string $searchInText){
+
+string $longText = $searchInText;
+string $shortText = $searchWord;
+int $i = 0;
+int $j = 0;
+string $searchText = “”;
+for($i = 1; $i <= (size($longText)-1); $i++){
+for($j = $i; $j <= size($longText); $j++){
+$searchText = substring($longText, $i, $j);
+//print(” i ” + $i + ” ” + $j + ” j \n”);
+if ($searchText == $shortText){
+return 1;
+//print(“drinnen”);
+}
+
+}
+
+}
+return 0;
+}
+
+//Usage:
+ySearch(“where is schiho today?”, “schiho”);
+
+//Result: 1
+//-----------------------------------
+for ($i = 0; $i< (`size $SceneTextures`); $i++){
+    $Test = catchQuiet(`getAttr ($SceneTextures[$i] + ".fileTextureName")`); 
+    if ($Test == 0){ 
+        string $TexturePath = `getAttr ($SceneTextures[$i] + ".fileTextureName")`;
+        //print ("$TexturePath: " + $TexturePath + "\n");
+        string $NewPath = substituteAllString($TexturePath, $old_path, $new_path);
+        setAttr -type "string" ($SceneTextures[$i] + ".fileTextureName") $NewPath;
+        catchQuiet (AEfileTextureReloadCmd ($SceneTextures[$i] + ".fileTextureName")); 
+    }
+}
+
+
+string $NewPath = substituteAllString("abcdef", "xyz", "123");
+
+string $s1="hello";
+string $s2="goodbye";
+int $compare = `strcmp $s1 $s2`;
+// Result: 1 //
+$compare = `strcmp $s2 $s1`;
+// Result: -1 //
+$compare = `strcmp "hello" $s1`;
+

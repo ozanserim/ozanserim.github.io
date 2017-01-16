@@ -1,0 +1,7 @@
+//Get all materials in scene then get their type
+string $materials[] = `ls -mat`; 
+
+for ($i = 0; $i< (`size $materials`); $i++){
+	print ($materials[$i] + "\n");
+	print (`objectType $materials[$i]` + "\n");
+}

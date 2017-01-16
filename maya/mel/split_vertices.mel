@@ -1,0 +1,14 @@
+//SPLITS OBJECT VERTICES
+//SELECT OBJECTS AND RUN SCRIPT
+
+string $shapes[] = `ls -sl`;
+int $vertCount[];
+for ($shape in $shapes){ 
+	select $shape;
+	$vertCount = `polyEvaluate -vertex $shape`;
+	print ($vertCount);
+	for ($i=0; $i < size($vertCount); $i++){
+		polySplitVertex $shape.vtx[$i];
+	}
+	select -cl;
+}

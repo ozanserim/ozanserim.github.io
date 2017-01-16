@@ -1,0 +1,20 @@
+//Import Obj files
+string $obj_file = "";
+string $path = "";
+for( $i=1; $i<14; ++$i ){
+	//Set objfile name
+	if ($i < 10) {
+		$obj_file = "black_0" + $i;
+		print ($obj_file + "\n");
+	} else {
+		$obj_file = "black_" + $i;
+		print ($obj_file + "\n");
+	}
+	
+	$path = "D:/assets/avatars/power_rangers_lionsgate/source/black/black/" + $obj_file + "/Obj/" + $obj_file + "_SymmetricalBase_000.OBJ";
+	print ($path + "\n");
+	file -import -type "OBJ"  -ignoreVersion -ra true -mergeNamespacesOnClash true -namespace ":" -options "mo=1"  -pr $path;
+	select -r Mesh ;
+	rename $obj_file;
+}
+

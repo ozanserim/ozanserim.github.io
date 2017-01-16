@@ -1,0 +1,121 @@
+//Import Files from Dirs
+//For dragon ball z 
+//Import the variation
+//D:\assets\avatars\dragonBallZ\vegeta\source\Végéta
+
+string $scan_root = "D:\\assets\\avatars\\dragonBallZ\\vegeta\\source\\Végéta\\";
+string $scan_dirs[];
+string $obj_files[]; 
+string $obj_path;
+string $dir_path;
+string $fbx_path;
+string $tforms[];
+string $shapes[];
+string $fbxPath;
+string $fbxFiles[];
+int $size;
+
+
+$scan_dirs = `getFileList -folder $scan_root`;
+for($dir in $scan_dirs){
+	print ($dir + "\n");
+	$dir_path = $scan_root + $dir + "\\";
+	print ($dir_path + "\n");
+	$obj_files = `getFileList -folder $dir_path -filespec "*.obj"`;
+	print ($obj_files[0] + "\n");
+	$obj_path = $dir_path + $obj_files[0];
+	print ($obj_path + "\n");
+	file -import -type "OBJ"  -ignoreVersion -ra true -mergeNamespacesOnClash false -options "mo=1"  -pr $obj_path;       
+	$shapes = `ls -g`;
+	$size = size($shapes);
+	for( $i=0; $i<$size; ++$i ){
+		print ($shapes[$i] + "\n"); 
+		$tforms[$i] = substituteAllString($shapes[$i], "Shape", "");
+		rename $tforms[$i] $obj_path;
+	}
+	print $tforms;
+	$fbxPath = ($obj_path + ".fbx");
+	file -force -options "mo=1;lo=1" -type "FBX export" -pr -ea $fbxPath;
+	file -f -new;
+}
+
+$scan_dirs = `getFileList -folder $scan_root`;
+for($dir in $scan_dirs){
+	$dir_path = $scan_root + $dir + "\\";
+	print ($dir_path + "\n");
+	$fbxFiles = `getFileList -folder $dir_path -filespec "*.fbx"`;
+	$fbxPath = $dir_path + $fbxFiles[0];
+	file -import -type "FBX"  -ignoreVersion -ra true -mergeNamespacesOnClash false -options "mo=1"  -pr $fbxPath;       
+	
+}
+
+
+
+
+
+
+
+
+
+string $tforms[];
+string $shapes[] = `ls -g`;
+int $size = size($shapes);
+for( $i=0; $i<$size; ++$i ){
+	print ($shapes[$i] + "\n"); 
+	$tforms[$i] = substituteAllString($shapes[$i], "Shape", "");
+	rename $tforms[$i] "test";
+}
+print $tforms;
+
+ 
+rename $dir;
+
+
+string 
+select -all;
+rename "test";
+select -all `listTransforms -geometry`;
+ls -sl
+string $transforms[] = `ls -sl -tr`; //lists all the transform nodes in the scene
+string $polyMeshes[] = `filterExpand -sm 12 $transforms`; //filters out all the non-polymesh nodes
+select -r $polyMeshes; //selects all the polymeshes
+
+
+$g = `ls -sl -tr`;
+print $g;
+
+select -all `listTransforms -geometry`;
+$g = `ls -sl "Ref*"`;
+
+listRelatives -p
+x
+
+//------------------------------------------------------
+
+string $scan_root = "/Users/ozan/Documents/faceshift/profiles";
+string $scan_dirs[]; 
+string $obj_path;
+string $dir_path;
+string $fbx_path;
+
+$scan_dirs = `getFileList -folder $scan_root`;
+
+for($dir in $scan_dirs){
+    if ($dir != ".DS_Store"){
+        print ($dir + "\n");
+        $dir_path = $scan_root +"/"+ $dir;
+        $obj_path = $dir_path +"/Neutral.obj";
+        print ($obj_path + "\n");
+        file -import -type "OBJ"  -ignoreVersion -ra true -mergeNamespacesOnClash false -options "mo=1"  -pr $obj_path;       
+        addRecentFile($obj_path, "OBJ");
+        select -r -sym Neutral_Mesh ;
+        setAttr "Neutral_Mesh.scaleZ" .1;
+        setAttr "Neutral_Mesh.scaleX" .1;
+        setAttr "Neutral_Mesh.scaleY" .1;
+        makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;
+//        SelectAllGeometry;
+        rename $dir;
+
+//        file -force -options "mo=1" -type "FBX export" -pr -ea $fbx_path;
+    }
+}
