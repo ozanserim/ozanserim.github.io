@@ -37,6 +37,7 @@
     <Content Include="javascripts\goku-supersaijyan.js" />
     <Content Include="javascripts\ozans_soundMaker.js" />
     <Content Include="javascripts\ozans_sound_test.js" />
+    <Content Include="javascripts\superSaiyanWithTrigger.js" />
     <Content Include="json_ui.js" />
     <Content Include="main.js" />
     <Content Include="maya\python\mask_dictionary\mask_data.txt" />
